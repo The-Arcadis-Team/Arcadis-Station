@@ -1,0 +1,100 @@
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: ClothingArmorFleshCult
+  name: Flesh cultist armor
+  description: A boon from the one true god... or so the cultists believe.
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/OuterClothing/Armor/Flesh_cult.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/OuterClothing/Armor/Flesh_cult.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.05
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.80
+        Slash: 0.90
+        Piercing: 0.80
+        Caustic: 0.60
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: StaminaDamageResistance
+    coefficient: 0.7
+  - type: ToggleableClothing
+    slot: head
+    clothingPrototype: ClothingHeadHelmetFlesh
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
+    - HidesHarpyWings
+    - FullBodyOuter
+
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: ClothingOuterHardsuitNTPD
+  name: NTPD hardsuit
+  description: A standard issue hardsuit worn by NTPD operatives. If you see this breaking down your door, it may be best to find a hiding spot.
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/OuterClothing/Hardsuits/ntpd.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/OuterClothing/Hardsuits/ntpd.rsi
+  - type: FireProtection
+    reduction: 1
+  - type: ExplosionResistance
+    damageCoefficient: 0.05
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.4
+        Slash: 0.4
+        Piercing: 0.3
+        Heat: 0.7
+        Radiation: 0.6
+        Caustic: 0.6
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: HeldSpeedModifier
+  - type: StaminaDamageResistance
+    coefficient: 0.5
+  - type: ToggleableClothing
+    slot: head
+    clothingPrototype: ClothingHeadHelmetHardsuitNTPD
+  - type: Tag
+    tags:
+    - Hardsuit
+    - HidesHarpyWings
+    - FullBodyOuter
+
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: ClothingArmorMalformedCarapace
+  name: malformed flesh carapace
+  description: Twisted armor made of flesh and bone. It’s hard to tell where the armor ends and the wearer begins.
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/OuterClothing/Armor/Carapace_Malformed_Limbs.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/OuterClothing/Armor/Carapace_Malformed_Limbs.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.95
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Caustic: 0.95
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: HeldSpeedModifier
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
+    - FullBodyOuter

@@ -1,0 +1,50 @@
+#NTPD
+
+- type: entity
+  id: LockerNTPDLocker
+  name: NTPD locker
+  parent: LockerBase
+  description: A personal storage locker for NTPD gear.
+  components:
+  - type: Sprite
+    sprite: _ARC/Structures/Closet.rsi
+    noRot: true
+    layers:
+    - state: generic
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: generic_door
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: locked
+      map: ["enum.LockVisualLayers.Lock"]
+      shader: unshaded
+    - state: welded
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+    - state: paper
+      visible: false
+      sprite: Structures/Storage/closet_labels.rsi
+      offset: "-0.065,0"
+      map: ["enum.PaperLabelVisuals.Layer"]
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: NTPD
+    stateDoorOpen: NTPD_open
+    stateDoorClosed: NTPD_door
+  - type: AccessReader
+    access: [ [ "NTPD" ] ]
+
+- type: entity
+  id: LockerNTPDLockerFilled
+  suffix: Filled
+  parent: LockerNTPDLocker
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingUniformJumpsuitNTPDofficial
+      - id: ClothingBackpackNTPD
+      - id: ClothingUniformJumpsuitNTPDofficialskirt
+        amount: 1
+      - id: ClothingEyesHudSecurity
+        prob: 0.5
+      - id: AirTankFilled
+        prob: 0.5

@@ -1,0 +1,237 @@
+- type: entity
+  name: laser blast
+  id: BulletEnergyBlasterCR
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Reflective
+    reflective:
+    - Energy
+  - type: FlyBySound
+    sound:
+      collection: EnergyMiss
+      params:
+        volume: 5
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: heavylaser
+      shader: unshaded
+  - type: Ammo
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        hard: false
+        mask:
+        - Opaque
+  - type: Projectile
+    impactEffect: BulletImpactEffectRedDisabler
+    damage:
+      types:
+        Heat: 20
+    soundHit:
+      collection: MeatLaserImpact
+
+- type: entity
+  name: disabler blast
+  id: BulletDisablerBlasterCR
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Reflective
+    reflective:
+    - Energy
+  - type: FlyBySound
+    sound:
+      collection: EnergyMiss
+      params:
+        volume: 5
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser
+      shader: unshaded
+  - type: Ammo
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        hard: false
+        mask:
+        - Opaque
+  - type: StaminaDamageOnCollide
+    damage: 30
+  - type: Projectile
+    impactEffect: BulletImpactEffectDisabler
+    damage:
+      types:
+        Heat: 5
+    soundHit:
+      collection: MeatLaserImpact
+
+- type: entity
+  name: laser spreadshot
+  id: BulletLaserSpreadPistolCR
+  parent: BulletEnergyBlasterCR
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ProjectileSpread
+    proto: BulletEnergyBlasterCR
+    count: 3 #60 damage if all hit
+    spread: 15
+
+- type: entity
+  name: disabler spreadshot
+  id: BulletDisablerSpreadPistolCR
+  parent: BulletDisablerBlasterCR
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ProjectileSpread
+    proto: BulletDisablerBlasterCR
+    count: 3 #instant knock if you get all hit
+    spread: 20
+
+- type: entity
+  id: BulletExplosiveLaserCR
+  name: Explosive Blaster
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: heavylaser
+      shader: unshaded
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: DemolitionCharge
+    maxIntensity: 2
+    intensitySlope: 4
+    totalIntensity: 2
+    maxTileBreak: 0
+  - type: PointLight
+    radius: 2
+    color: orange
+    energy: 0.5
+  - type: Projectile
+    deleteOnCollide: true
+    onlyCollideWhenShot: true
+    damage:
+      types:
+        Heat : 10 # damage relied on explosion so this is lower than normal
+
+- type: entity
+  id: BulletEmpBlasterCR
+  name: emp blast
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+    layers:
+    - state: omnilaser
+      shader: unshaded
+  - type: EmpOnTrigger
+    range: 0.5
+    energyConsumption: 100
+    disableDuration: 2
+  - type: Ammo
+    muzzleFlash: null
+  - type: PointLight
+    radius: 1.5
+    color: blue
+    energy: 0.5
+  - type: Projectile
+    damage:
+      types:
+        Heat : 5
+
+- type: entity
+  name: green laser blast
+  id: BulletEnergyBlasterGREENCR
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Reflective
+    reflective:
+    - Energy
+  - type: FlyBySound
+    sound:
+      collection: EnergyMiss
+      params:
+        volume: 5
+  - type: Sprite
+    sprite: _ARC/Objects/Weapons/Guns/cr-projectile.rsi
+    layers:
+    - state: greenlaser
+      shader: unshaded
+  - type: Ammo
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        hard: false
+        mask:
+        - Opaque
+  - type: Projectile
+    impactEffect: BulletImpactEffectGreen
+    damage:
+      types:
+        Heat: 20
+    soundHit:
+      collection: MeatLaserImpact
+
+# caused a crash, I think something is filled out wrong, will need to check later. - Glue
+
+# type: entity
+#  name : magnum disabler bolt
+#  id: BulletDisablerMagnum
+#  parent: BaseBullet
+#  categories: [ HideSpawnMenu ]
+#  components:
+#  - type: Reflective
+#    reflective:
+#    - Energy
+#  - type: FlyBySound
+#    sound:
+#      collection: EnergyMiss
+#      params:
+#        volume: 5
+#  - type: Sprite
+#    sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
+#    layers:
+#    - state: omnilaser
+#      shader: unshaded
+#  - type: Physics
+#  - type: Fixtures
+#    fixtures:
+#      projectile:
+#        shape:
+#          !type:PhysShapeAabb
+#          bounds: "-0.15,-0.3,0.15,0.3"
+#        hard: false
+#        mask:
+#        - Impassable
+#        - BulletImpassable
+#      fly-by: *flybyfixture
+#  - type: Ammo
+#  - type: StaminaDamageOnCollide
+#    damage: 45
+#  - type: Projectile
+#    impactEffect: BulletImpactEffectDisabler
+#    damage:
+#      types:
+#        Heat: 8
+#    soundHit:
+#      collection: WeakHit
+#    forceSound: true

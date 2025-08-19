@@ -1,0 +1,143 @@
+# NTPD operator
+
+- type: entity
+  id: RandomHumanoidSpawnerNTPD
+  name: NTPD operator
+  suffix: NTPD
+  components:
+    - type: Sprite
+      sprite: _Arc/Clothing/OuterClothing/Hardsuits/ntpd.rsi
+      state: icon
+    - type: RandomMetadata
+      nameSegments:
+        - NamesFirstMilitaryLeader
+        - NamesLastMilitary
+    - type: RandomHumanoidSpawner
+      settings: NTPDop
+
+- type: randomHumanoidSettings
+  id: NTPDop
+  randomizeName: false
+  speciesBlacklist:
+    - Shadowkin
+  components:
+    - type: MindShield
+    - type: Loadout
+      prototypes: [ NTPDGear ]
+    - type: RandomMetadata
+      nameSegments:
+        - NamesFirstMilitaryLeader
+        - NamesLastMilitary
+
+# NTPD Gear
+
+- type: startingGear
+  id: NTPDGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitNTPDofficial
+    back: ClothingBackpackNTPDfilled
+    mask: ClothingMaskNTPD
+    eyes: ClothingEyesHudSecurity
+    ears: ClothingHeadsetNTPD
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitNTPD
+    suitstorage: AirTankFilled
+    shoes: ClothingShoesBootsMagNTPD
+    id: NTPDPDA
+    pocket1: EnergyShield
+    belt: ClothingBeltMilitaryWebbingMedFilled
+  innerClothingSkirt: ClothingUniformJumpsuitNTPDofficial
+  inhand:
+    - EnergySword
+
+# NTPD Agent
+
+- type: entity
+  id: RandomHumanoidSpawnerNTPDagent
+  name: NTPD Agent
+  suffix: NTPD, Agent
+  components:
+    - type: Sprite
+      sprite: _Arc/Clothing/OuterClothing/Hardsuits/ntpd.rsi
+      state: icon
+    - type: RandomHumanoidSpawner
+      settings: NTPDagent
+    - type: RandomMetadata
+      nameSegments:
+      - names_first
+      - names_last
+
+- type: randomHumanoidSettings
+  id: NTPDagent
+  randomizeName: false
+  speciesBlacklist:
+    - Shadowkin
+  components:
+    - type: MindShield
+    - type: Loadout
+      prototypes: [ NTPDGearAgent ]
+    - type: RandomMetadata
+      nameSegments:
+      - names_first
+      - names_last
+
+# NTPD Agent Gear
+
+- type: startingGear
+  id: NTPDGearAgent
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitChameleon
+    back: ClothingBackpackChameleon
+    mask: ClothingMaskGasVoiceChameleon
+    ears: ClothingHeadsetChameleon
+    gloves: ClothingHandsChameleon
+    shoes: ClothingShoesChameleon
+    id: PassengerPDA
+    pocket1: AgentIDCard
+    pocket2: BarberScissors
+
+# Merc
+
+- type: entity
+  id: RandomHumanoidSpawnerMERC
+  name: Mercenary
+  suffix: merc
+  components:
+    - type: Sprite
+      sprite: Mobs/Species/Human/parts.rsi
+      state: full
+    - type: RandomMetadata
+      nameSegments:
+        - NamesFirstmerc
+        - NamesLastmerc
+    - type: RandomHumanoidSpawner
+      settings: MERCSettings
+
+- type: randomHumanoidSettings
+  id: MERCSettings
+  randomizeName: false
+  speciesBlacklist:
+    - Shadowkin
+  components:
+    - type: MindShield
+    - type: Loadout
+      prototypes: [ MERCGear ]
+    - type: RandomMetadata
+      nameSegments:
+        - NamesFirstmerc
+        - NamesLastmerc
+
+# Merc Gear
+
+- type: startingGear
+  id: MERCGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMercenary
+    back: ClothingBackpackMerc
+    mask: ClothingMaskGasMerc
+    ears: ClothingHeadsetMERC
+    gloves: ClothingHandsGlovesCombat
+    suitstorage: AirTankFilled
+    shoes: ClothingShoesBootsMerc
+    id: MERCPDA
+    belt: ClothingBeltMercWebbing

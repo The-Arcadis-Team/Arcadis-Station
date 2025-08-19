@@ -1,0 +1,58 @@
+# all mats secfab use
+#Plastic
+#Steel
+#Glass
+#Plasma
+#Silver
+#Gold
+#Uranium
+
+- type: latheRecipe
+  id: WeaponLaserAssaultLaserRifleCR
+  result: WeaponLaserAssaultLaserRifleCR
+  category: Weapons
+  completetime: 8
+  materials:
+    Steel: 1200
+    Glass: 1000
+    Plastic: 1000
+    Gold: 300
+    Silver: 300
+
+- type: latheRecipe
+  id: WeaponRailgunUziRefrenceCR
+  result: WeaponRailgunUziRefrenceCR
+  category: Weapons
+  completetime: 10
+  materials:
+    Steel: 1500
+    Glass: 1000
+    Plastic: 500
+    Gold: 600
+    Silver: 600
+    Uranium: 300
+
+- type: latheRecipe
+  id: PowercellRiflemagcr
+  result: PowercellRiflemagcr
+  category: Ammo
+  completetime: 4
+  materials:
+    Steel: 300
+    Glass: 200
+    Gold: 50
+    Silver: 50
+    Plasma: 400
+
+- type: latheRecipe
+  id: PowercellRailgunmagcr
+  result: PowercellRailgunmagcr
+  category: Ammo
+  completetime: 4
+  materials:
+    Steel: 500
+    Glass: 300
+    Gold: 250
+    Silver: 100
+    Uranium: 300
+    Plasma: 600

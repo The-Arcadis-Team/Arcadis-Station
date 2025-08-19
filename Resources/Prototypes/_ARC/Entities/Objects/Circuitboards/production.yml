@@ -1,0 +1,14 @@
+- type: entity
+  id: MoneyPrinterMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: counterfeiting station machine board
+  description: A strange circuit board for an illegal machine. You should probably turn this in to Security... but let's be honest. You won't.
+  components:
+    - type: MachineBoard
+      prototype: MoneyPrinter
+      requirements:
+        MatterBin: 3
+        Manipulator: 2
+      materialRequirements:
+        Glass: 1
+        Steel: 1

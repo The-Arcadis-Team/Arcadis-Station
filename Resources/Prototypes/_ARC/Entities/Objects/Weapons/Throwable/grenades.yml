@@ -1,0 +1,16 @@
+- type: entity
+  parent: SmokeGrenade
+  id: LubeGrenades
+  name: lubenade
+  description: A special grenade for elite clowns. Releases a large cloud of lube foam.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Grenades/pyrogrenade.rsi
+  - type: SmokeOnTrigger
+    duration: 15
+    spreadAmount: 50
+    smokePrototype: Foam
+    solution:
+      reagents:
+      - ReagentId: SpaceLube
+        Quantity: 30

@@ -1,0 +1,57 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatNTPD
+  name: NTPD hat
+  description: Tip a hat to universal stability.
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/Head/Hats/NTPDcap.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/Head/Hats/NTPDcap.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatNTPDberet
+  name: NTPD hat
+  description: Tip a beret to universal stability.
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/Head/Hats/NTPDberet.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/Head/Hats/NTPDberet.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatUnusual
+  name: unusual burning flames team captain
+  description: It costs four hundred thousand dollars to wear this hat... for twelve seconds.
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/Head/Hats/teamcaptain.rsi
+  - type: StaticPrice
+    price: 319.23
+  - type: Clothing
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.15"
+    sprite: _Arc/Clothing/Head/Hats/teamcaptain.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatkid
+  name: finder's hat
+  description: A fancy little hat to wear when looking for time.
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/Head/Hats/hatkid.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/Head/Hats/hatkid.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon

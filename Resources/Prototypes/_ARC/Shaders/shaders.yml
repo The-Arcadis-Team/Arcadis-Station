@@ -1,0 +1,14 @@
+- type: shader
+  id: Gilded
+  kind: source
+  path: "/Textures/_ARC/Shaders/gilded.swsl"
+
+#- type: shader
+#  id: Deletion
+#  kind: source
+#  path: "/Textures/Shaders/deletion.swsl"
+
+- type: shader
+  id: Caramelldansen
+  kind: source
+  path: "/Textures/_ARC/Shaders/caramelldansen.swsl"

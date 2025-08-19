@@ -1,0 +1,43 @@
+- type: entity
+  name: invictus armor
+  parent: BaseItem
+  id: InvictusArmor
+  abstract: true # Disable item
+  description: "The note on it says that it's not finished yet. It's not working properly, no wonder..."
+  components:
+  - type: EmitSoundOnPickup
+    sound: /Audio/SimpleStation14/Items/Handling/welder_pickup.ogg
+  - type: EmitSoundOnDrop
+    sound: /Audio/SimpleStation14/Items/Handling/welder_drop.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/welder_drop.ogg
+  - type: Sprite
+    sprite: _Arc/Clothing/OuterClothing/Armor/InvictusArmor.rsi
+    layers:
+    - state: icon
+    - state: enabled_icon
+      visible: false
+      shader: unshaded
+      map: ["enum.ToggleVisuals.Layer"]
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleVisuals.Toggled:
+        enum.ToggleVisuals.Layer:
+          True: { visible: true }
+          False: { visible: false }
+  - type: Item
+    size: Small
+    sprite: _Arc/Clothing/OuterClothing/Armor/InvictusArmor.rsi
+  - type: ItemToggle
+    predictable: false
+    soundActivate:
+      collection: WelderOn
+      params:
+        variation: 0.125
+        volume: -5
+    soundDeactivate:
+      collection: WelderOff
+      params:
+        variation: 0.125
+        volume: -5

@@ -1,0 +1,35 @@
+- type: entity
+
+  id: ClothingHeadHelmetFlesh
+  name: flesh cult helmet
+  description: A boon from the one true deity, Carnemori. It's a helmet made of flesh.
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: /Textures/_Arc/Clothing/Head/Helmets/Flesh_cult_helmet.rsi
+    state: icon
+  - type: Clothing
+    sprite: /Textures/_Arc/Clothing/Head/Helmets/Flesh_cult_helmet.rsi
+#    equipSound: /Audio/Mecha/mechmove03.ogg
+#    unequipSound: /Audio/Mecha/mechmove03.ogg
+    quickEquip: false
+    slots: [ HEAD ]
+  - type: Item
+    size: Normal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.95
+  - type: Clickable
+  - type: InteractionOutline
+  - type: GroupExamine
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: IdentityBlocker
+  - type: HideLayerClothing
+    slots:
+    - Snout

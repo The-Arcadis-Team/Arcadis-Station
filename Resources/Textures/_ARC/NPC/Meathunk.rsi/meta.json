@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "size": {
+    "x": 45,
+    "y": 45
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by gulo for Arcadis Station",
+  "states": [
+    {
+      "name": "alive",
+      "directions": 4,
+      "delays": [
+        [
+          0.6,
+          0.6
+        ],
+        [
+          0.6,
+          0.6
+        ],
+        [
+          0.6,
+          0.6
+        ],
+        [
+          0.6,
+          0.6
+        ]
+      ]
+    },
+    {
+      "name": "dead"
+    }
+  ]
+}

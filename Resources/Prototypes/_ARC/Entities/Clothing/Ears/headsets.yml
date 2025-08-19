@@ -1,0 +1,66 @@
+#NTPD
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetNTPD
+  name: NTPD headset
+  description: Can you hear the universe singing?
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyNTPD
+      - EncryptionKeyStationMaster
+  - type: Sprite
+    sprite: _Arc/Clothing/Ears/Headsets/NTPD.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/Ears/Headsets/NTPD.rsi
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyNTPD
+  name: NTPD encryption key
+  description: An encryption key used by the NTPD.
+  components:
+  - type: EncryptionKey
+    channels:
+    - NTPDradio
+    defaultChannel: NTPDradio
+  - type: Sprite
+    layers:
+    - state: crypt_blue
+    - state: nano_label
+
+#Merc
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetMERC
+  name: mercenary headset
+  description: ATTENTION! FIVE MINUTES LEFT IN THE MISSION, FIVE MINUTES LEFT IN THE MISSION!
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMERC
+      - EncryptionKeyCommon
+  - type: Sprite
+    sprite: _Arc/Clothing/Ears/Headsets/MERC.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/Ears/Headsets/MERC.rsi
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyMERC
+  name: mercenary encryption key
+  description: An encryption key used by mercenaries.
+  components:
+  - type: EncryptionKey
+    channels:
+    -  Urbsolradio
+    defaultChannel: Urbsolradio
+  - type: Sprite
+    sprite: _ARC/Objects/encryption_keys.rsi
+    layers:
+    - state: crypt_rusted
+    - state: Merc_label

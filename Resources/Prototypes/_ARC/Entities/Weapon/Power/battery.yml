@@ -1,0 +1,148 @@
+- type: entity
+  name: rifle power cell magazine
+  description: The power cell has a magazine-like design with separate ports for universal and small laser connection port.
+  id: PowercellRiflemagcr
+  parent: BasePowerCell
+  components:
+    - type: Sprite
+      sprite: _Arc/Objects/Power/energymags.rsi
+      layers:
+      - map: [ "enum.PowerCellVisualLayers.Base" ]
+        state: mag-rifle
+      - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+        state: o2
+        shader: unshaded
+    - type: Battery
+      maxCharge: 1500
+      startingCharge: 1500
+    - type: HitscanBatteryAmmoProvider
+      proto: GreenRifleLaser
+      fireCost: 50
+    - type: SolutionContainerManager
+      solutions:
+        battery:
+          maxVol: 15
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: Zinc
+            Quantity: 15
+    - type: Tag
+      tags:
+        - RifleBatteryMag
+
+
+- type: entity
+  name: railgun power cell magazine
+  description: The power cell has a magazine-like design with separate ports for universal and large laser connection port.
+  id: PowercellRailgunmagcr
+  parent: BasePowerCell
+  components:
+    - type: Sprite
+      sprite: _Arc/Objects/Power/energymags.rsi
+      layers:
+      - map: [ "enum.PowerCellVisualLayers.Base" ]
+        state: mag-rifle
+      - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+        state: o2
+        shader: unshaded
+    - type: Battery
+      maxCharge: 1500
+      startingCharge: 1500
+    - type: HitscanBatteryAmmoProvider
+      proto: GreenRailgunLaser
+      fireCost: 500
+    - type: SolutionContainerManager
+      solutions:
+        battery:
+          maxVol: 15
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: Zinc
+            Quantity: 15
+    - type: Tag
+      tags:
+        - RailgunBatteryMag
+
+- type: entity
+  name: uzi railgun battery #before you ask yes it is fuckin impossible to obtain this without admeme
+  description: yea i made this one to be accurate to the show because i can :) -cr #i dont care i like this desc and im not changin it
+  id: PowercellCANONRailgunmagcr
+  parent: BasePowerCell
+  components:
+    - type: Sprite
+      sprite: _Arc/Objects/Power/energymags.rsi
+      layers:
+      - map: [ "enum.PowerCellVisualLayers.Base" ]
+        state: mag-rifle
+      - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+        state: o2
+        shader: unshaded
+    - type: Battery
+      maxCharge: 1500
+      startingCharge: 1500
+    - type: HitscanBatteryAmmoProvider
+      proto: OPGreenRailgunLaser #stupidly one shot anything 400 heat and 1000 structure to destroy anything.
+      fireCost: 1500
+    - type: SolutionContainerManager
+      solutions:
+        battery:
+          maxVol: 15
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: Zinc
+            Quantity: 15
+    - type: Tag
+      tags:
+        - RailgunBatteryMag
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 5 # 5 minute to recharge this fuckin thing (yea i think it was 5 minute to recharge in the show)
+
+#Meathunk laser
+
+- type: entity
+  name: Pure darkness
+  parent: BaseWeaponBatterySmall
+  id: Weaponpuredark
+  description: Pure darkness, When you look into it you hear screams.
+  components:
+  - type: Sprite
+    sprite: _ARC/Objects/Weapons/Guns/Pure_dark.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Gun
+    fireRate: 2
+    soundGunshot:
+      path: /Audio/_ARC/Soul.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: Darklaser
+    fireCost: 50
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 40
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 750
+
+- type: hitscan
+  id: Darklaser
+  damage:
+    types:
+      Heat: 14
+  muzzleFlash:
+    sprite: _ARC/Objects/Weapons/Guns/Projectiles.rsi
+    state: muzzle_soul
+  travelFlash:
+    sprite: _ARC/Objects/Weapons/Guns/Projectiles.rsi
+    state: beam_soul
+  impactFlash:
+    sprite: _ARC/Objects/Weapons/Guns/Projectiles.rsi
+    state: impact_soul

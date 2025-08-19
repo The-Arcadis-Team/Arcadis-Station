@@ -1,0 +1,33 @@
+# Support
+
+- type: listing
+  id: UplinkSeedPacketSunflower
+  name: Sunflower
+  description: Sunflowers are essential for you to produce extra sun. Try planting as many as you can!
+  productEntity: SunflowerSeeds
+  cost:
+    Sun: 50
+  categories:
+  - UplinkSupportPVZ
+
+# Instakill
+
+- type: listing
+  id: UplinkSeedPacketCherryBomb
+  name: Cherry Bomb
+  description: Cherry Bombs can blow up an area. They have a short fuse so throw them near targets.
+  productEntity: CherryBombSeeds
+  cost:
+    Sun: 150
+  categories:
+  - UplinkInstaPVZ
+
+- type: listing
+  id: UplinkSeedPacketDoomShroom
+  name: Doom-shroom
+  description: Doom-shrooms destroy everything in a large area and leave a crater that can't be planted on.
+  productEntity: DoomShroomSeeds
+  cost:
+    Sun: 125
+  categories:
+  - UplinkInstaPVZ

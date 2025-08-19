@@ -1,0 +1,21 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitNTPDofficial
+  name: NTPD official uniform
+  description: A uniform worn by NTPD officials.
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/Uniforms/Jumpsuit/ntpd.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/Uniforms/Jumpsuit/ntpd.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitNTPDofficialskirt
+  name: NTPD official uniform
+  description: A uniform worn by NTPD officials.
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/Uniforms/Jumpskirt/ntpd.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/Uniforms/Jumpskirt/ntpd.rsi

@@ -1,0 +1,59 @@
+#also in base game this file should be called clusterbang.yml for some reason. eh who cared. -cr
+
+- type: entity
+  parent: GrenadeBase
+  id: Clustercleanade
+  name: cluster cleanade
+  description: Why use one cleanade when you can use three at once!
+  components:
+  - type: Sprite
+    sprite: _Arc/Objects/Weapons/Throwable/grenade/clusterclean.rsi
+    layers:
+    - state: icon
+      map: ["enum.TriggerVisualLayers.Base"]
+  - type: ClusterGrenade
+    fillPrototype: CleanerGrenade
+    velocity: 3.5
+    distance: 5
+  - type: OnUseTimerTrigger
+    beepSound:
+      path: "/Audio/Effects/beep1.ogg"
+      params:
+        volume: 5
+    initialBeepDelay: 0
+    beepInterval: 0.5
+  - type: EmitSoundOnTrigger
+    sound:
+      path: "/Audio/Machines/door_lock_off.ogg"
+  - type: ContainerContainer
+    containers:
+      cluster-payload: !type:Container
+
+- type: entity
+  parent: GrenadeBase
+  id: Clusternuke
+  name: cluster nuclear option
+  description: if you see this, you either an admeme or about to be vaporize. #i dont bother spellchecking this cause nobody except the maintainer that check this shit. -cr
+  components:
+  - type: Sprite
+    sprite: _Arc/Objects/Weapons/Throwable/grenade/clusternuke.rsi
+    layers:
+    - state: icon
+      map: ["enum.TriggerVisualLayers.Base"]
+  - type: ClusterGrenade
+    fillPrototype: NuclearGrenade
+    velocity: 3.5
+    distance: 5
+  - type: OnUseTimerTrigger
+    beepSound:
+      path: "/Audio/Effects/beep1.ogg"
+      params:
+        volume: 5
+    initialBeepDelay: 0
+    beepInterval: 0.5
+  - type: EmitSoundOnTrigger
+    sound:
+      path: "/Audio/Machines/door_lock_off.ogg"
+  - type: ContainerContainer
+    containers:
+      cluster-payload: !type:Container

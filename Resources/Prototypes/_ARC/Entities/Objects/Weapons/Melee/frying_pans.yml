@@ -1,0 +1,91 @@
+- type: entity
+  name: frying pan
+  parent: BaseItem
+  id: FryingPan
+  description: Used for cooking, rolling, and beating people to death.
+  components:
+  - type: Sprite
+    sprite: /Textures/_Arc/Objects/Weapons/Melee/fryingpan.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    range: 1.6
+    damage:
+      types:
+        Blunt: 7.5
+        Structural: 5
+    bluntStaminaDamageFactor: 2.0
+    heavyRateModifier: 2
+    heavyDamageBaseModifier: 1.75
+    heavyStaminaCost: 10
+    maxTargets: 2
+    angle: 120
+    soundHit:
+      path: /Audio/_ARC/melee_frying_pan_01.ogg
+  - type: DamageOtherOnHit
+    staminaCost: 10
+  - type: Item
+    size: Normal
+  - type: Tool
+    qualities:
+    - Rolling
+    speedModifier: 0.05 # if a motherfucker trys rolling out a pizza with the pan handle ill laugh my ass off - Dusty Whitewitch
+  - type: Clothing
+    quickEquip: true
+    slots:
+    - back
+  - type: UseDelay
+    delay: 1
+  - type: PhysicalComposition
+    materialComposition:
+      Wood: 250
+  - type: Tag
+    tags:
+    - BaseballBat
+
+- type: entity
+  name: golden frying pan
+  parent: BaseItem
+  id: GoldFryingPan
+  description: 1.77%.
+  components:
+  - type: Sprite
+    sprite: /Textures/_Arc/Objects/Weapons/Melee/goldpan.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    range: 1.6
+    damage:
+      types:
+        Blunt: 30 # fair and balanced
+        Structural: 25
+        Holy: 200 #mm
+    bluntStaminaDamageFactor: 2.0
+    heavyRateModifier: 2
+    heavyDamageBaseModifier: 1.75
+    heavyStaminaCost: 30 # g o l d
+    maxTargets: 2
+    angle: 120
+    soundHit:
+      path: /Audio/_ARC/melee_frying_pan_01.ogg #i tried to overlay the random crit sound with this. i couldnt.
+  - type: DamageOtherOnHit
+    staminaCost: 45 # this bitch solid gold. do not wideswing you dope
+  - type: Item
+    size: Normal
+  - type: Tool
+    qualities:
+    - Rolling
+    speedModifier: 0.05
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - back
+  - type: UseDelay
+    delay: 1
+  - type: PhysicalComposition
+    materialComposition:
+      Wood: 250
+  - type: Tag
+    tags:
+    - BaseballBat
+

@@ -1,0 +1,310 @@
+#_Arcadis\Objects\Weapons\Guns\Battery
+#_Arc\Objects\Weapons\Guns\Battery
+
+- type: entity
+  name: overclocked railgun
+  parent: [BaseWeaponBattery, BaseGunWieldable]
+  id: WeaponRailgun
+  description: A railgun that fires projectiles at such high speeds that they become lasers!
+  components:
+  - type: Sprite
+    sprite: _ARC/Objects/Weapons/Guns/Battery/railgun_fbi.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: _ARC/Objects/Weapons/Guns/Battery/railgun_fbi.rsi
+  - type: Gun
+    selectedMode: SemiAuto
+    fireRate: 3
+    availableModes:
+      - SemiAuto
+      - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: Pulse
+    fireCost: 1000
+  - type: Battery
+    maxCharge: 3000
+    startingCharge: 3000
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 50
+    autoRechargePause: true
+    autoRechargePauseTime: 10
+
+- type: entity
+  name: magnum disabler
+  parent: BaseWeaponBatterySmall
+  id: WeaponDisablerMagnum
+  description: For any self-respecting captain when Security won't get off their asses.
+  components:
+    - type: Tag
+      tags:
+        - Taser
+        - Sidearm
+    - type: Sprite
+      sprite: _ARC/Objects/Weapons/Guns/Battery/disabler_magnum_fbi.rsi
+      layers:
+        - state: base
+          map: ["enum.GunVisualLayers.Base"]
+        - state: mag-unshaded-0
+          map: ["enum.GunVisualLayers.MagUnshaded"]
+          shader: unshaded
+    - type: Clothing
+      sprite: _ARC/Objects/Weapons/Guns/Battery/disabler_magnum_fbi.rsi
+      quickEquip: false
+      slots:
+        - suitStorage
+        - Belt
+    - type: Gun
+      fireRate: 1.5
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
+    - type: ProjectileBatteryAmmoProvider
+      proto: BulletDisablerMagnum
+      fireCost: 100
+    - type: MagazineVisuals
+      magState: mag
+      steps: 5
+      zeroVisible: true
+    - type: Appearance
+    - type: Battery
+      maxCharge: 600
+      startingCharge: 600
+    - type: GuideHelp
+      guides:
+      - Security
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 5.0
+      bluntStaminaDamageFactor: 2.5
+      wideAnimationRotation: 135
+
+- type: entity
+  name: CRT-2 Energy Pistol
+  parent: BaseWeaponBatterySmall
+  id: CRWeaponPistolEnergy
+  description: Highly advanced energy pistol that is custom-made for each user. It comes with 3 firing modes and a self-recharging battery. The only drawback is that all non-lethal firing modes consume more energy than typical energy pistol models.
+  components:
+  - type: Sprite
+    sprite: _ARC/Objects/Weapons/Guns/Battery/crweaponenergypistol.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mode-disabler
+      shader: unshaded
+      map: [ "Firemode" ]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: _ARC/Objects/Weapons/Guns/Battery/crweaponenergypistol.rsi
+  - type: Gun
+    soundGunshot:
+      path: /Audio/DeltaV/Weapons/Guns/Gunshots/laser.ogg
+    soundEmpty:
+      path: /Audio/DeltaV/Weapons/Guns/Empty/dry_fire.ogg
+  - type: Battery
+    maxCharge: 800
+    startingCharge: 800
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletDisablerBlasterCR
+    fireCost: 100
+  - type: EnergyGun
+    fireModes:
+    - proto: BulletDisablerBlasterCR
+      fireCost: 100
+      name: disable
+      state: disabler
+    - proto: BulletEnergyBlasterCR
+      fireCost: 100
+      name: lethal
+      state: lethal
+    - proto: BulletLaserSpreadPistolCR
+      fireCost: 200
+      name: spread lethal
+      state: lethal
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 50
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.EnergyGunFireModeVisuals.State:
+        Firemode:
+          Disabler: { state: mode-disabler }
+          Lethal: { state: mode-lethal }
+  - type: Tag
+    tags:
+    - Sidearm
+  - type: StaticPrice
+    price: 750
+  - type: MeleeWeapon
+    attackRate: 1.2
+    damage:
+      types:
+        Blunt: 7
+    bluntStaminaDamageFactor: 1.0
+    wideAnimationRotation: 135
+  - type: DamageOtherOnHit
+    staminaCost: 5
+
+- type: entity
+  name: CRT-5 Energy Blaster
+  parent: BaseWeaponBatterySmall
+  id: CRWeaponEnergyBlasterCR
+  description: A versatile laser pistol combining precision laser beams, controlled explosive projectile and EMP projectiles, offering adaptable energy modes, and compact design for both combat and tech disruption. #chatgpt ah kind of fuckin description
+  components:
+  - type: Sprite
+    sprite: _ARC/Objects/Weapons/Guns/Battery/crt5energyblaster.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mode-disabler
+      shader: unshaded
+      map: [ "Firemode" ]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: _ARC/Objects/Weapons/Guns/Battery/crt5energyblaster.rsi
+  - type: Gun
+    soundGunshot:
+      path: /Audio/DeltaV/Weapons/Guns/Gunshots/laser.ogg
+    soundEmpty:
+      path: /Audio/DeltaV/Weapons/Guns/Empty/dry_fire.ogg
+  - type: Battery
+    maxCharge: 1000
+    startingCharge: 1000
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletEmpBlasterCR
+    fireCost: 100
+  - type: EnergyGun
+    fireModes:
+    - proto: BulletEmpBlasterCR
+      fireCost: 100
+      name: disable
+      state: disabler
+    - proto: BulletEnergyBlasterCR
+      fireCost: 100
+      name: lethal
+      state: lethal
+    - proto: BulletExplosiveLaserCR
+      fireCost: 500
+      name: explosive laser
+      state: lethal
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 50
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.EnergyGunFireModeVisuals.State:
+        Firemode:
+          Disabler: { state: mode-disabler }
+          Lethal: { state: mode-lethal }
+  - type: Tag
+    tags:
+    - Sidearm
+  - type: StaticPrice
+    price: 750
+  - type: MeleeWeapon
+    attackRate: 1.2
+    damage:
+      types:
+        Blunt: 7
+    bluntStaminaDamageFactor: 1.0
+    wideAnimationRotation: 135
+  - type: DamageOtherOnHit
+    staminaCost: 5
+
+- type: entity
+  name: CRT-20 Laser Assault Rifle
+  parent: [BaseWeaponPowerCell, BaseGunWieldable]
+  id: WeaponLaserAssaultLaserRifleCR #LCP : Laser connection port
+  description: A laser assault rifle powered by a special battery, featuring a small laser connection port for seamless integration. Designed to deliver precise, high-powered energy firepower in combat.
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: PowercellRiflemagcr
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        whitelist:
+          tags:
+            - RifleBatteryMag
+  - type: Sprite
+    sprite: _ARC/Objects/Weapons/Guns/Battery/energy_green_rifle.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Item
+    sprite: _ARC/Objects/Weapons/Guns/Battery/energy_green_rifle.rsi
+    size: Large
+  - type: Clothing
+    sprite: _ARC/Objects/Weapons/Guns/Battery/energy_green_rifle.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+
+- type: entity
+  name: CRT-21 Laser Railgun
+  parent: [BaseWeaponPowerCell, BaseGunWieldable]
+  id: WeaponRailgunUziRefrenceCR #i have soft spot for rogue ai show. ngl.
+  description: A laser railgun powered by a special battery, featuring a large laser connection port for seamless integration. This railgun was improved from 1 shot to 3 shot by an IPC named Uzi from R&D.
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: PowercellRailgunmagcr
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        whitelist:
+          tags:
+            - RailgunBatteryMag
+  - type: GunRequiresWield
+  - type: Clothing
+    sprite: _ARC/Objects/Weapons/Guns/Battery/energy_green_rifle.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: Sprite
+    sprite: _ARC/Objects/Weapons/Guns/Battery/energy_green_railgun.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Item
+    sprite: _ARC/Objects/Weapons/Guns/Battery/energy_green_railgun.rsi
+    size: Large
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true

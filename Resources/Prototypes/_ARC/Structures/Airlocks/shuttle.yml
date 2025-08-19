@@ -1,0 +1,17 @@
+- type: entity
+  parent: AirlockGlassShuttle
+  id: AirlockExternalGlassShuttleNTPDLocked
+  suffix: External, Glass, Docking, Locked, NTPD
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsNTPD ]
+
+- type: entity
+  parent: AirlockGlassShuttle
+  id: AirlockExternalGlassShuttleMERCLocked
+  suffix: External, Glass, Docking, Locked, merc
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMERC ]
