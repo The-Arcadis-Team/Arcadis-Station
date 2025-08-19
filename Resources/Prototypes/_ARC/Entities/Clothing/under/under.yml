@@ -1,0 +1,11 @@
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingUnderSocksShoes
+  name: shoesocks
+  description: Finally, socks AND shoes! They're cut off for maximum comfort while wearing a skirt.
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/under/blacksocks.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/under/blacksocks.rsi
+

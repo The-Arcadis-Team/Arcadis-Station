@@ -1,0 +1,201 @@
+- type: entity
+  id: AnomalyFleshSuperCharge
+  parent: BaseAnomaly
+  suffix: Flesh, SuperCharge
+  description: An impossible object. You'd think about the implications of being nearby it, but now is not the time for that!
+  components:
+  - type: Anomaly
+    corePrototype: AnomalyCoreFlesh
+    coreInertPrototype: AnomalyCoreFleshInert
+    minPulseLength: 60
+    maxPulseLength: 180
+  - type: Sprite
+    layers:
+    - state: anom5
+      map: ["enum.AnomalyVisualLayers.Base"]
+    - state: anom5-pulse
+      map: ["enum.AnomalyVisualLayers.Animated"]
+      visible: false
+  - type: PointLight
+    radius: 4.0
+    energy: 15
+    color: "#cb5b7e"
+    castShadows: false
+  - type: TileSpawnAnomaly
+    entries:
+    - settings:
+        spawnOnPulse: true
+        spawnOnStabilityChanged: true
+        minAmount: 10
+        maxAmount: 20
+        maxRange: 10
+      floor: FloorFlesh
+    - settings:
+        spawnOnSuperCritical: true
+        minAmount: 30
+        maxAmount: 50
+        maxRange: 30
+      floor: FloorFlesh
+  - type: EntitySpawnAnomaly
+    entries:
+    - settings:
+        spawnOnPulse: true
+        minAmount: 3
+        maxAmount: 7
+        minRange: 1.5
+        maxRange: 5
+      spawns:
+      - FleshBlocker
+    - settings:
+        spawnOnPulse: true
+        minAmount: 5
+        maxAmount: 9
+        minRange: 9
+        maxRange: 7
+      spawns:
+      - MobFleshJared
+      - MobFleshGolem
+      - MobFleshClamp
+      - MobFleshLover
+    - settings:
+        spawnOnSuperCritical: true
+        minAmount: 30
+        maxAmount: 50
+        minRange: 10
+        maxRange: 20
+      spawns:
+      - FleshBlocker
+    - settings:
+        spawnOnSuperCritical: true
+        minAmount: 15
+        maxAmount: 30
+        maxRange: 15
+      spawns:
+      - MobFleshJared
+      - MobFleshGolem
+      - MobFleshClamp
+      - MobFleshLover
+    - settings:
+        spawnOnSuperCritical: true
+        minAmount: 15
+        maxAmount: 30
+        maxRange: 30
+      spawns:
+      - FleshKudzu
+    - settings:
+        spawnOnShutdown: true
+        maxAmount: 20
+        maxRange: 10
+      spawns:
+      - MobFleshJared
+      - MobFleshGolem
+      - MobFleshClamp
+      - MobFleshLover
+      - FleshKudzu
+
+- type: entity
+  id: AnomalyFloraSuperChargeSafe
+  parent: BaseAnomaly
+  suffix: Flora, SuperCharge, Safe
+  description: An impossible object. You'd think about the implications of being nearby it, but something tells you it's probably fine.
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Structures/Specific/Anomalies/flora_anom.rsi
+    layers:
+    - state: anom
+      map: ["enum.AnomalyVisualLayers.Base"]
+    - state: pulse
+      map: ["enum.AnomalyVisualLayers.Animated"]
+      visible: false
+  - type: PointLight
+    radius: 10
+    energy: 16
+    color: "#6270bb"
+  - type: Anomaly
+    animationTime: 6
+    offset: 0, 0
+    corePrototype: AnomalyCoreFlora
+    coreInertPrototype: AnomalyCoreFloraInert
+    minPulseLength: 30
+    maxPulseLength: 80
+    anomalyContactDamage:
+      types:
+        Holy: 20
+  - type: TileSpawnAnomaly
+    entries:
+    - settings:
+        spawnOnPulse: true
+        minAmount: 15
+        maxAmount: 30
+        maxRange: 15
+      floor: FloorAstroGrass
+    - settings:
+        spawnOnSuperCritical: true
+        minAmount: 60
+        maxAmount: 120
+        maxRange: 30
+      floor: FloorAstroGrass
+  - type: EntitySpawnAnomaly
+    entries:
+    - settings:
+        spawnOnPulse: true
+        minAmount: 15
+        maxAmount: 30
+        maxRange: 10
+      spawns:
+      - KudzuFlowerFriendly
+
+- type: entity
+  id: AnomalyFloraSuperChargeAngry
+  parent: BaseAnomaly
+  suffix: Flora, SuperCharge, Angry
+  description: An impossible object. Why does it give off the feeling of being incredibly mad?
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Structures/Specific/Anomalies/flora_anom.rsi
+    layers:
+    - state: anom
+      map: ["enum.AnomalyVisualLayers.Base"]
+    - state: pulse
+      map: ["enum.AnomalyVisualLayers.Animated"]
+      visible: false
+  - type: PointLight
+    radius: 10
+    energy: 16
+    color: "#6270bb"
+  - type: Anomaly
+    animationTime: 6
+    offset: 0, 0
+    corePrototype: AnomalyCoreFlora
+    coreInertPrototype: AnomalyCoreFloraInert
+    minPulseLength: 30
+    maxPulseLength: 80
+    anomalyContactDamage:
+      types:
+        Holy: 20
+  - type: TileSpawnAnomaly
+    entries:
+    - settings:
+        spawnOnPulse: true
+        minAmount: 15
+        maxAmount: 30
+        maxRange: 15
+      floor: FloorAstroGrass
+    - settings:
+        spawnOnSuperCritical: true
+        minAmount: 60
+        maxAmount: 120
+        maxRange: 30
+      floor: FloorAstroGrass
+  - type: EntitySpawnAnomaly
+    entries:
+    - settings:
+        spawnOnPulse: true
+        minAmount: 15
+        maxAmount: 30
+        maxRange: 10
+      spawns:
+      - KudzuFlowerAngry
+

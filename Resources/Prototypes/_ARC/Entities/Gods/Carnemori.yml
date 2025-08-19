@@ -1,0 +1,147 @@
+- type: entity
+  name: Carnemori
+  parent:
+  - BaseSimpleMob
+  - MobCombat
+  - MobBloodstream
+  id: GodCarnemori
+  abstract: true
+  description: The one and only, god of all that is evil, god of all that is flesh. His horrifying name is Carnemori.
+  components:
+    - type: RotationVisuals
+      defaultRotation: 90
+      horizontalRotation: 90
+    - type: HitscanBatteryAmmoProvider
+      proto: Darklaser
+      fireCost: 62.5
+    - type: Battery
+      maxCharge: 1000
+      startingCharge: 1000
+    - type: BatterySelfRecharger
+      autoRecharge: true
+      autoRechargeRate: 40
+    - type: Reflect
+      reflectProb: 0.7
+      reflects:
+      - Energy
+    - type: Gun
+      fireRate: 0.75
+      useKey: false
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot: /Audio/_ARC/Soul.ogg
+    - type: NpcFactionMember
+      factions:
+        - SimpleHostile
+    - type: Speech
+      speechVerb: Cluwne
+    - type: CombatMode
+    - type: Tag
+      tags:
+        - CannotSuicide
+        - DoorBumpOpener
+        - FootstepSound
+    - type: FootstepModifier
+      footstepSoundCollection:
+        collection: FootstepThud
+    - type: MobMover
+    - type: InputMover
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 0.8
+      baseSprintSpeed: 2
+      weightlessModifier: 1.5
+    - type: Sprite
+      sprite: _Arc/Gods/Carnemori
+      layers:
+        - sprite: _Arc/Gods/Carnemori
+          state: alive
+      scale: 1.2, 1.2
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: alive
+        Critical:
+          Base: Critical
+    - type: MobState
+    - type: InnateTool
+      tools:
+        - id: Weaponpuredark
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        2500: Critical
+    - type: Metabolizer
+      solutionOnBody: false
+      updateInterval: 0.25
+      metabolizerTypes: [ Dragon ]
+      groups:
+        - id: Medicine
+        - id: Poison
+    - type: Butcherable
+      spawned:
+        - id: Weaponpuredark
+          amount: 1
+    - type: MeleeWeapon
+      soundHit:
+        path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+      damage:
+        types:
+          Piercing: 12
+          Slash: 12
+          Structural: 85
+    - type: Input
+      context: "human"
+    - type: Bloodstream
+      bloodMaxVolume: 300
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.7
+          density: 301
+          mask:
+          - MobMask
+          layer:
+          - MobLayer
+    - type: FireVisuals
+      sprite: Mobs/Effects/onfire.rsi
+      normalState: Generic_mob_burning
+    - type: AmbientSound
+      range: 15
+      volume: 5
+      sound:
+        path: /Audio/Psionics/heartbeat_fast.ogg
+
+- type: entity
+  name: Carnemori
+  parent: GodCarnemori
+  id: MobCarnemori
+  suffix: "flesh"
+  components:
+  - type: AnnounceOnSpawn
+    message: carnemori-has-risen
+    sender: carnemori-has-risen-sender
+    sound:
+      path: /Audio/Misc/ratvar_reveal.ogg
+    color: "#bf0000"
+  - type: CargoSellBlacklist
+  - type: IntrinsicRadioReceiver
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - Common
+    - Command
+    - Engineering
+    - Medical
+    - Science
+    - Security
+    - Service
+    - Supply
+    - Syndicate
+    - Urbsolradio
+    globalReceive: true
+  - type: WarpPoint
+    follow: true
+    location: Carnemori

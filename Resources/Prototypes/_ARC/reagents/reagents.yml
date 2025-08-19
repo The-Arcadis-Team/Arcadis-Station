@@ -1,0 +1,31 @@
+- type: reagent
+  id: Cognizyne
+  name: reagent-name-cognizyne
+  desc: reagent-desc-cognizyne
+  group: Medicine
+  physicalDesc: reagent-physical-desc-enigmatic
+  flavor: magical
+  color: "#a200ff"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:MakeSentientStrong
+        conditions:
+        - !type:ReagentThreshold
+          min: 1
+
+- type: reagent
+  id: NoTrademark
+  name: reagent-name-notrademark
+  desc: reagent-desc-notrademark
+  group: Medicine
+  physicalDesc: reagent-physical-desc-enigmatic
+  flavor: chalky
+  color: "#ffffff"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:NoMoreExisting
+        conditions:
+        - !type:ReagentThreshold
+          min: 0.01

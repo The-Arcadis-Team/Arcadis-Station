@@ -1,0 +1,23 @@
+- type: entity
+  name: antique bureaucratic rifle
+  parent: WeaponSniperMosin
+  id: constituion
+  description: A ceremonial rifle given to the best of the best paperpushers. Uses .30 rifle ammo.
+  components:
+  - type: Sprite
+    sprite: /Textures/_Arc/Objects/Weapons/Guns/Snipers/bolt_gun_hd_fbi.rsi
+  - type: Gun
+    fireRate: 1
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+  - type: BallisticAmmoProvider
+    capacity: 5
+    proto: CartridgeLightRifle
+    whitelist:
+      tags:
+      - CartridgeLightRifle
+  - type: Clothing
+    sprite: /Textures/_Arc/Objects/Weapons/Guns/Snipers/bolt_gun_hd_fbi.rsi

@@ -1,0 +1,29 @@
+#When adding new hardsuits, please try to keep the organization consistent with hardsuit.yml (if possible.)
+
+#For now, since locational damage is not a thing, all "combat" hardsuits (with the exception of the deathsquad hardsuit) have the equvilent of a helmet in terms of armor.
+#This is so people don't need to wear both regular, on-station helmets and hardsuits to get full protection.
+#Generally, unless you're adding something like caustic damage, you should probably avoid messing with armor here outside of the above scenario.
+
+
+
+- type: entity
+  parent: ClothingHeadHardsuitBase
+  id: ClothingHeadHelmetHardsuitHeckdivers
+  name: Bureaucrat tacsuit helmet
+  description: Extra bright included head lamp for seeing all that paperwork you need to file to quit.
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: /Textures/_Arc/Clothing/Head/Hardsuits/notcopyrightedhelmet.rsi
+  - type: Clothing
+    sprite: /Textures/_Arc/Clothing/Head/Hardsuits/notcopyrightedhelmet.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9

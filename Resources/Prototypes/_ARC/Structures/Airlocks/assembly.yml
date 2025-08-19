@@ -1,0 +1,17 @@
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockAssemblyNTPD
+  suffix: NTPD
+  components:
+  - type: Sprite
+    sprite: _Arc/Structures/Doors/Airlocks/Standard/NTPD.rsi
+    state: "assembly"
+
+- type: entity
+  parent: AirlockAssembly
+  id: AirlockAssemblyMERC
+  suffix: Merc
+  components:
+  - type: Sprite
+    sprite: _Arc/Structures/Doors/Airlocks/Standard/Merc.rsi
+    state: "assembly"

@@ -1,0 +1,15 @@
+- type: radioChannel
+  id: NTPDradio
+  name: chat-radio-NTPD
+  keycode: 'd'
+  frequency: 1337
+  color: "#0606c4"
+  longRange: true
+
+- type: radioChannel
+  id: Urbsolradio
+  name: chat-radio-Urbsol
+  keycode: 'o'
+  frequency: 8008
+  color: "#2a6900"
+  longRange: true

@@ -1,0 +1,49 @@
+- type: hitscan
+  id: GreenRailgunLaser
+  maxLength: 100
+  damage:
+    types:
+      Heat: 50
+      Structural: 100
+  muzzleFlash:
+    sprite: _ARC/Objects/Weapons/Guns/cr-projectile.rsi
+    state: muzzle_beam_heavy2
+  travelFlash:
+    sprite: _ARC/Objects/Weapons/Guns/cr-projectile.rsi
+    state: beam_heavy2
+  impactFlash:
+    sprite: _ARC/Objects/Weapons/Guns/cr-projectile.rsi
+    state: impact_beam_heavy2
+
+
+- type: hitscan
+  id: GreenRifleLaser
+  damage:
+    types:
+      Heat: 15
+  muzzleFlash:
+    sprite: _ARC/Objects/Weapons/Guns/cr-projectile.rsi
+    state: muzzle_laser
+  travelFlash:
+    sprite: _ARC/Objects/Weapons/Guns/cr-projectile.rsi
+    state: beam
+  impactFlash:
+    sprite: _ARC/Objects/Weapons/Guns/cr-projectile.rsi
+    state: impact_laser
+
+- type: hitscan
+  id: OPGreenRailgunLaser
+  maxLength: 100
+  damage:
+    types:
+      Heat: 400
+      Structural: 1000
+  muzzleFlash:
+    sprite: _ARC/Objects/Weapons/Guns/cr-projectile.rsi
+    state: muzzle_beam_heavy2
+  travelFlash:
+    sprite: _ARC/Objects/Weapons/Guns/cr-projectile.rsi
+    state: beam_heavy2
+  impactFlash:
+    sprite: _ARC/Objects/Weapons/Guns/cr-projectile.rsi
+    state: impact_beam_heavy2

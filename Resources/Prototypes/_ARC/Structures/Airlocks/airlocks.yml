@@ -1,0 +1,59 @@
+# NTPD
+
+- type: entity
+  parent: Airlock
+  id: AirlockNTPD
+  suffix: NTPD
+  components:
+  - type: Sprite
+    sprite: _Arc/Structures/Doors/Airlocks/Standard/NTPD.rsi
+  - type: WiresPanelSecurity
+    securityLevel: medSecurity
+  - type: PaintableAirlock
+    department: Command
+  - type: Wires
+    layoutId: AirlockCommand
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockNTPDGlass
+  suffix: NTPD
+  components:
+  - type: Sprite
+    sprite: _Arc/Structures/Doors/Airlocks/Glass/NTPD.rsi
+  - type: WiresPanelSecurity
+    securityLevel: medSecurity
+  - type: PaintableAirlock
+    department: Command
+  - type: Wires
+    layoutId: AirlockCommand
+
+# Merc
+
+- type: entity
+  parent: Airlock
+  id: AirlockMERC
+  suffix: merc
+  components:
+  - type: Sprite
+    sprite: _Arc/Structures/Doors/Airlocks/Standard/Merc.rsi
+  - type: WiresPanelSecurity
+    securityLevel: medSecurity
+  - type: PaintableAirlock
+    department: Command
+  - type: Wires
+    layoutId: AirlockCommand
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockMERCGlass
+  suffix: merc
+  components:
+  - type: Sprite
+    sprite: _Arc/Structures/Doors/Airlocks/Glass/Merc.rsi
+  - type: WiresPanelSecurity
+    securityLevel: medSecurity
+  - type: PaintableAirlock
+    department: Command
+  - type: Wires
+    layoutId: AirlockCommand

@@ -1,0 +1,35 @@
+- type: entity
+  id: StorePresetUplinkPlants
+  abstract: true
+  components:
+  - type: Store
+    name: store-preset-name-seeds
+    categories:
+    - UplinkSupportPVZ
+    - UplinkAttackerPVZ
+    - UplinkDefensePVZ
+    - UplinkInstaPVZ
+    currencyWhitelist:
+    - Sun
+    balance:
+      Sun: 0
+
+- type: entity
+  id: StorePresetUplinkNTPD
+  abstract: true
+  components:
+  - type: Store
+    name: store-preset-name-uplink
+    categories:
+    - UplinkWeaponryntpd
+    - UplinkAmmontpd
+    - UplinkExplosivesntpd
+    - UplinkWearablesntpd
+    - UplinkChemicalsntpd
+    - UplinkDeceptionntpd
+    - UplinkDisruptionntpd
+    - UplinkImplantsntpd
+    currencyWhitelist:
+    - Telecrystal
+    balance:
+      Telecrystal: 0

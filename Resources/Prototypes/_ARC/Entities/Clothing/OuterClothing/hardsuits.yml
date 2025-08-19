@@ -1,0 +1,38 @@
+#When adding new hardsuits, please try to keep the organization consistent with hardsuit-helmets.yml (if possible.)
+
+
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitHeckdivers
+  name: NT-824 "Bureaucrat" tacsuit
+  description: A tacsuit for defending your rights to wait three to five business days for your crew care representative to reply.
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/OuterClothing/Hardsuits/notcopyrighted.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/OuterClothing/Hardsuits/notcopyrighted.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    coefficient: 0.001
+  - type: ExplosionResistance
+    damageCoefficient: 0.2
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.3
+        Slash: 0.3
+        Piercing: 0.3
+        Heat: 0.3
+        Radiation: 0.3
+        Caustic: 0.3
+  - type: ClothingSpeedModifier
+    walkModifier: 1.0
+    sprintModifier: 1.0
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitHeckdivers
+  - type: StaminaDamageResistance
+    coefficient: 0.1 # 90%
+

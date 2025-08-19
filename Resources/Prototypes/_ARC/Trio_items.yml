@@ -1,0 +1,231 @@
+#Gamer
+#PDA
+
+- type: entity
+  parent: BasePDA
+  id: gamerPDA
+  name: game enjoyer PDA
+  description: Its a cool PDA used by me, The one whom enjoys games :)
+  components:
+  - type: Pda
+    id: IDCardtoweg
+    state: pda-game
+  - type: PdaBorderColor
+    borderColor: "#800813"
+  - type: Icon
+    state: pda-game
+  - type: UnpoweredFlashlight
+  - type: PointLight
+    enabled: false
+    color: "#00FFFF"
+    radius: 2
+    energy: 1.5
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    netsync: false
+
+#ID card
+
+- type: entity
+  parent: IDCardStandard
+  id: IDCardtoweg
+  name: game enjoyer's ID card
+  components:
+  - type: Sprite
+    sprite: _ARC/Objects/IDcard.rsi
+    layers:
+    - state: Toweg-id
+    - state: Toweg-id-2
+  - type: Item
+    heldPrefix: blue
+  - type: IdCard
+    jobTitle: job-name-game-enjoyer
+    jobIcon: JobIconNanotrasen
+  - type: Access
+    groups:
+    - TrueAllAccess
+    tags:
+    - NTPD
+
+#cloak
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakToweg
+  name: The one whom enjoys game's cloak
+  description: It's nothingness.
+  components:
+  - type: Sprite
+    sprite: _ARC/Clothing/Head/Cloaks/Toweg.rsi
+  - type: Unremoveable
+    deleteOnDrop: true
+
+#toweg
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetGamer
+  name: Game enjoyer's headset
+  description: Can you hear the universe screaming?
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyNTPD
+      - EncryptionKeyStationMaster
+  - type: Sprite
+    sprite: _Arc/Clothing/Ears/Headsets/toweg.rsi
+  - type: Clothing
+    sprite: _Arc/Clothing/Ears/Headsets/toweg.rsi
+
+- type: startingGear
+  id: TowegGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSuitBlackAlt
+    shoes: ClothingShoesBootsCowboyBrown
+    id: gamerPDA
+    neck: ClothingNeckCloakToweg
+    gloves: ClothingHandsGlovesCombat
+    ears: ClothingHeadsetGamer
+
+#Det
+#PDA
+
+- type: entity
+  parent: BasePDA
+  id: theDetectivePDA
+  name: The detective's PDA
+  description: Smells like, nothing.
+  components:
+  - type: Pda
+    id: theDetectiveIDCard
+    state: pda-detective
+  - type: PdaBorderColor
+    borderColor: "#774705"
+  - type: Icon
+    state: pda-detective
+
+#ID card
+
+- type: entity
+  parent: IDCardStandard
+  id: theDetectiveIDCard
+  name: the detectives ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: roboticist
+  - type: IdCard
+    jobTitle: job-name-the-detective
+  - type: Access
+    groups:
+    - TrueAllAccess
+
+#Robo arm
+
+- type: entity
+  parent: ClothingHandsGlovesColorBlack
+  id: ClothingHandsroboticarm
+  name: combat robo arm
+  description: A robotic arm.
+  components:
+  - type: Sprite
+    sprite: _ARC/Clothing/Hands/Combat_robo_arm.rsi
+  - type: Clothing
+    sprite: _ARC/Clothing/Hands/Combat_robo_arm.rsi
+  - type: Insulated
+  - type: Fiber
+    fiberMaterial: fibers-insulative
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.5
+        Blunt: 0.5
+  - type: MeleeWeapon
+    attackRate: 1.5
+    damage:
+      types:
+       Blunt: 8
+       Slash: 8
+       Structural: 15
+    soundHit:
+      collection: metal
+    animation: WeaponArcFist
+    mustBeEquippedToUse: true
+  - type: Unremoveable
+    deleteOnDrop: true
+
+#Old science coat
+
+- type: entity
+  parent: ClothingOuterStorageFoldableBase
+  id: ClothingOuterCoatoldRobo
+  name: old roboticist lab coat
+  description: Looks like it has been through thousands of years of action.
+  components:
+  - type: Sprite
+    sprite: _ARC/Clothing/OuterClothing/Coats/labcoat_robo_det.rsi
+  - type: Clothing
+    sprite: _ARC/Clothing/OuterClothing/Coats/labcoat_robo_det.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 1
+
+- type: entity
+  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatoldRobo]
+  id: ClothingOuterCoatoldRoboOpened
+  name: old roboticist lab coat
+
+#Mask
+
+- type: entity
+  parent: ClothingMaskPullableBase
+  id: ClothingMaskPlaguedet
+  name: creepy plague doctor mask
+  description: A true bad omen.
+  components:
+  - type: Sprite
+    sprite: _ARC/Clothing/Mask/TDplaguedoctormask.rsi
+  - type: Clothing
+    sprite: _ARC/Clothing/Mask/TDplaguedoctormask.rsi
+  - type: BreathMask
+  - type: HideLayerClothing
+    slots:
+    - Snout
+    hideOnToggle: true
+  - type: Unremoveable
+    deleteOnDrop: true
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetTD
+  name: The detecivte's headset
+  description: Can you hear the universe whispering?
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeySecurity
+      - EncryptionKeyRobo
+      - EncryptionKeyJustice
+      - EncryptionKeyPrison
+      - EncryptionKeyCommon
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/robotics.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/robotics.rsi
+
+- type: startingGear
+  id: TDGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitRoboticist
+    shoes: ClothingShoesBootsCowboyBrown
+    id: theDetectivePDA
+    gloves: ClothingHandsroboticarm
+    ears: ClothingHeadsetTD
+    mask: ClothingMaskPlaguedet
+    outerClothing: ClothingOuterCoatoldRoboOpened
+    back: ClothingBackpackSalvage
+    pocket1: Flash

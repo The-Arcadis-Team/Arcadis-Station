@@ -1,0 +1,18 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Made by Coreupt and Eris for Arcadis Station, based on the Invictus Armor by Diansu. Long live Oceana.",
+    "size": {
+      "x": 32,
+      "y": 32
+    },
+    "states": [
+      {
+        "name": "icon"
+      },
+      {
+        "name": "enabled_icon"
+      }
+    ]
+  }
+

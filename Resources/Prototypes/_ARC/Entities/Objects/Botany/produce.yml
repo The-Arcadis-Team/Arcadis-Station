@@ -1,0 +1,313 @@
+- type: entity
+  name: cherry bomb
+  parent: FoodProduceBase
+  id: FoodCherryBomb
+  description: Why did I plant a cherry that could blow up at any second? Because I'm CRAZY!
+  components:
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: Explosion
+      - !type:ExplodeBehavior
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 3
+  - type: Explosive
+    explosionType: Default
+    # Why did I give it the intensity of a grenade? Because I'm CRAZY!
+    maxIntensity: 10
+    intensitySlope: 3
+    totalIntensity: 120
+  - type: FlavorProfile
+    flavors:
+      - cherry
+      - gunpowder
+  - type: Food
+    trash:
+    - TrashCherryPit
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 6
+        - ReagentId: Vitamin
+          Quantity: 6
+        - ReagentId: Ash
+          Quantity: 8
+  - type: Sprite
+    sprite: _Arc/Objects/Botany/cherrybomb.rsi
+  - type: Produce
+    seedId: cherrybomb
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: JuiceCherry
+        Quantity: 5
+  - type: Tag
+    tags:
+    - Fruit
+
+- type: entity
+  name: doom-shroom
+  parent: FoodProduceBase
+  id: FoodDoomShroom
+  description: An evil-looking mushroom that could destroy everything you hold dear. It wouldn't be hard.
+  components:
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: Explosion
+      - !type:ExplodeBehavior
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 3
+  - type: Explosive
+    explosionType: Default
+    # Absolutely NEVER make this obtainable outside of admeme. This is an instant detonation nuclear option.
+    maxIntensity: 20000
+    intensitySlope: 5
+    totalIntensity: 50
+  - type: FlavorProfile
+    flavors:
+      - tequila
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 30
+        reagents:
+        - ReagentId: Ash
+          Quantity: 25
+        - ReagentId: Nutriment
+          Quantity: 5
+  - type: Sprite
+    sprite: _Arc/Objects/Botany/doomshroom.rsi
+  - type: Produce
+    seedId: doomshroom
+  - type: Extractable
+    grindableSolutionName: food
+  - type: BadFood
+
+# Seed prototypes since i'm lazy
+- type: entity
+  parent: SeedBase
+  name: packet of cherry bomb seeds
+  id: CherryBombSeeds
+  components:
+    - type: Seed
+      seedId: cherrybomb
+    - type: Sprite
+      sprite: _Arc/Objects/Botany/cherrybomb.rsi
+
+- type: entity
+  parent: SeedBase
+  name: packet of doom-shroom seeds
+  id: DoomShroomSeeds
+  components:
+    - type: Seed
+      seedId: doomshroom
+    - type: Sprite
+      sprite: _Arc/Objects/Botany/doomshroom.rsi
+
+- type: entity
+  parent: SeedBase
+  name: packet of sunflower seeds
+  description: "Very useful for when there are zombies on your lawn."
+  id: SunflowerSeeds
+  components:
+    - type: Seed
+      seedId: sunflower
+    - type: Sprite
+      sprite: _Arc/Objects/Botany/sunflower.rsi
+
+# stats
+- type: seed
+  id: cherrybomb
+  name: seeds-cherry-bomb-name
+  noun: seeds-noun-seeds
+  displayName: seeds-cherry-bomb-display-name
+  plantRsi: _Arc/Objects/Botany/cherrybomb.rsi
+  packetPrototype: CherryBombSeeds
+  productPrototypes:
+    - FoodCherryBomb
+  harvestRepeat: Repeat
+  lifespan: 55
+  maturation: 6
+  production: 6
+  yield: 5
+  potency: 10
+  idealLight: 6
+  chemicals:
+    Nutriment:
+      Min: 1
+      Max: 6
+      PotencyDivisor: 30
+    Vitamin:
+      Min: 1
+      Max: 6
+      PotencyDivisor: 40
+    Ash:
+      Min: 1
+      Max: 8
+      PotencyDivisor: 40
+
+- type: seed
+  id: doomshroom
+  name: seeds-doom-shroom-name
+  noun: seeds-noun-spores
+  displayName: seeds-doom-shroom-display-name
+  plantRsi: _Arc/Objects/Botany/doomshroom.rsi
+  packetPrototype: DoomShroomSeeds
+  productPrototypes:
+    - FoodDoomShroom
+  lifespan: 25
+  maturation: 12
+  production: 3
+  yield: 3
+  potency: 10
+  growthStages: 2
+  waterConsumption: 0.60
+  nutrientConsumption: 0.50
+  chemicals:
+    Ash:
+      Min: 1
+      Max: 25
+      PotencyDivisor: 4
+    Nutriment: ## yumby :)
+      Min: 1
+      Max: 5
+      PotencyDivisor: 20
+
+- type: seed
+  id: sunflower
+  name: seeds-sunflower-name
+  noun: seeds-sunflower-seeds
+  displayName: seeds-sunflower-display-name
+  plantRsi: _Arc/Objects/Botany/sunflower.rsi
+  packetPrototype: SunflowerSeeds
+  productPrototypes:
+    - Sun25
+  harvestRepeat: repeat
+  lifespan: 25
+  maturation: 10
+  production: 3
+  yield: 1
+  potency: 10
+  growthStages: 3
+  waterConsumption: 0.60
+
+# Uplink
+- type: entity
+  parent: [ BaseItem, StorePresetUplinkPlants ]
+  id: BloomAndDoomUplink
+  name: Bloom and Doom catalog
+  description: An instant-delivery catalog radio provided by the Bloom and Doom Seed Company.
+  suffix: Empty
+  components:
+    - type: Sprite
+      sprite: Objects/Devices/communication.rsi
+      layers:
+        - state: radio
+    - type: Item
+      sprite: Objects/Devices/communication.rsi
+      heldPrefix: radio
+    - type: UserInterface
+      interfaces:
+        enum.StoreUiKey.Key:
+          type: StoreBoundUserInterface
+    - type: ActivatableUI
+      key: enum.StoreUiKey.Key
+    - type: Store
+      balance:
+        Sun: 0
+
+# Sun currency shit
+- type: entity
+  name: sun
+  parent: BaseItem
+  id: Sun
+  suffix: 20 Sun
+  description: It's best not to ask how you're holding pure sun essence.
+  components:
+  - type: Sprite
+    sprite: _Arc/Objects/Botany/sunflower.rsi
+    state: produce
+  - type: Item
+    sprite: _Arc/Objects/Botany/sunflower.rsi
+    size: Tiny
+  - type: Stack
+    count: 20
+    stackType: Sun
+  - type: StaticPrice
+    price: 0
+  - type: StackPrice
+    price: 200
+  - type: Currency
+    price:
+      Sun: 1
+  - type: PointLight
+    enabled: false
+    radius: 3
+    energy: 2.5
+    color: "#FFC458"
+    netsync: false
+
+- type: entity
+  parent: Sun
+  id: Sun1
+  suffix: 1 Sun
+  components:
+  - type: Stack
+    count: 1
+
+- type: entity
+  parent: Sun
+  id: Sun5
+  suffix: 5 Sun
+  components:
+  - type: Stack
+    count: 5
+
+- type: entity
+  parent: Sun
+  id: Sun10
+  suffix: 10 Sun
+  components:
+  - type: Stack
+    count: 10
+
+- type: entity
+  parent: Sun
+  id: Sun25
+  suffix: 25 Sun
+  components:
+  - type: Stack
+    count: 25
+
+- type: stack
+  id: Sun
+  name: sun
+  spawn: Sun1
+  maxCount: 2140000
+  itemSize: 1

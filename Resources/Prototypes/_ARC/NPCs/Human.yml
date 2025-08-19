@@ -1,0 +1,99 @@
+#NTPD
+
+- type: entity
+  name: NTPD operator
+  parent: BaseMobHuman
+  id: MobNTPDAI
+  suffix: Hates evil
+  components:
+    - type: NpcFactionMember
+      factions:
+        - NTPDbase
+    - type: Loadout
+      prototypes:
+        - NTPDGearAI
+    - type: InputMover
+    - type: MobMover
+    - type: HTN
+      rootTask:
+        task: SimpleHumanoidHostileCompound
+
+- type: entity
+  name: NTPD operator
+  parent: MobNTPDAI
+  id: MobNTPDAIHatesyndicate
+  suffix: Hates syndicate
+  components:
+    - type: NpcFactionMember
+      factions:
+        - NanoTrasen
+
+- type: entity
+  name: NTPD operator
+  parent: MobNTPDAI
+  id: MobNTPDAIHatenanoTrasen
+  suffix: Hates NanoTrasen
+  components:
+    - type: NpcFactionMember
+      factions:
+        - Syndicate
+
+- type: entity
+  name: NTPD operator
+  parent: MobNTPDAI
+  id: MobNTPDAIHateverything
+  suffix: Hates everything
+  components:
+    - type: NpcFactionMember
+      factions:
+        - Hatesall
+
+#NTPD ai gear
+
+- type: startingGear
+  id: NTPDGearAI
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitNTPDofficial
+    back: ClothingBackpackNTPD
+    mask: ClothingMaskNTPD
+    eyes: ClothingEyesHudSecurity
+    ears: ClothingHeadsetNTPD
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitNTPD
+    suitstorage: AirTankFilled
+    shoes: ClothingShoesBootsMagNTPD
+    id: NTPDPDA
+    belt: ClothingBeltMilitaryWebbingMedFilled
+
+#Merc
+
+- type: entity
+  name: Mercenary
+  parent: BaseMobHuman
+  id: MobMercenary
+  components:
+    - type: NpcFactionMember
+      factions:
+        - Mercenary
+    - type: Loadout
+      prototypes:
+        - MercenaryAIgear
+    - type: InputMover
+    - type: MobMover
+    - type: HTN
+      rootTask:
+        task: SimpleHumanoidHostileCompound
+
+#Mercenary ai gear
+
+- type: startingGear
+  id: MercenaryAIgear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMercenary
+    mask: ClothingMaskGasMerc
+    outerClothing: ClothingOuterArmorBasic
+    gloves: ClothingHandsGlovesCombat
+    back: ClothingBackpackMerc
+    shoes: ClothingShoesBootsMerc
+    id: MERCPDA
+    ears: ClothingHeadsetMERC

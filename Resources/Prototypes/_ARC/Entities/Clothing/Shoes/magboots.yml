@@ -1,0 +1,21 @@
+- type: entity
+  parent: ClothingShoesBootsMag
+  id: ClothingShoesBootsMagNTPD
+  name: NTPD magboots
+  description: State-of-the-art magnetic boots made by the RnD department of the NTPD.
+  components:
+  - type: Sprite
+    sprite: _Arc/Clothing/Shoes/Boots/magboots-NTPD.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Arc/Clothing/Shoes/Boots/magboots-NTPD.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: NoSlip
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - HighRiskItem
+  - type: StaticPrice
+    price: 1000
