@@ -123,6 +123,11 @@
     borderColor: "#774705"
   - type: Icon
     state: pda-detective
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-detective
 
 
 #ID card
