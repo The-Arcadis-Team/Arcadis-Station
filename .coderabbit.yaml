@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/coderabbit-overrides.v2.json
+language: "en" # English
+early_access: false
+reviews:
+  profile: assertive
+  high_level_summary: false
+  poem: false
+  review_status: false
+  collapse_walkthrough: true
+  path_filters: []
+  path_instructions: []
+  auto_review:
+    enabled: true
+    ignore_title_keywords:
+      - "WIP"
+      - "DO NOT MERGE"
+    drafts: false
+    base_branches: []
+chat:
+  auto_reply: false
