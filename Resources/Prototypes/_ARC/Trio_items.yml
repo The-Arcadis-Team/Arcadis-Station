@@ -122,26 +122,8 @@
   - type: PdaBorderColor
     borderColor: "#774705"
   - type: Icon
-    sprite: _ARC/Objects/Devices/pda.rsi
     state: pda-detective
-  - type: Sprite
-    sprite: _ARC/Objects/Devices/pda.rsi
-    layers:
-    - map: [ "enum.PdaVisualLayers.Base" ]
-      state: "pda"
-    - state: "light_overlay"
-      map: [ "enum.PdaVisualLayers.Flashlight" ]
-      shader: "unshaded"
-      visible: false
-    - state: "id_overlay"
-      map: [ "enum.PdaVisualLayers.IdLight" ]
-      shader: "unshaded"
-      visible: false
-  - type: Appearance
-    appearanceDataInit:
-      enum.PdaVisuals.PdaType:
-        !type:String
-        pda-detective
+
 
 #ID card
 
