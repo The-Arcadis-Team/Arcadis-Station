@@ -12,8 +12,6 @@
   - type: PdaBorderColor
     borderColor: "#0d2d50"
     accentVColor: "#0d2d50"
-  - type: Icon
-    state: pda-ntpd
   - type: CartridgeLoader
     preinstalled:
       - CrewManifestCartridge
@@ -23,6 +21,27 @@
       - SecWatchCartridge
       - AstroNavCartridge
       - NanoChatCartridge
+  - type: Icon
+    sprite: _ARC/Objects/Devices/pda.rsi
+    state: pda-ntpd
+  - type: Sprite
+    sprite: _ARC/Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-ntpd
 
 - type: entity
   parent: IDCardStandard
@@ -89,13 +108,32 @@
   - type: PdaBorderColor
     borderColor: "#484848"
     accentVColor: "#484848"
-  - type: Icon
-    state: pda-merc
   - type: CartridgeLoader
     preinstalled:
       - NotekeeperCartridge
       - AstroNavCartridge
       - NanoChatCartridge
+  - type: Icon
+    sprite: _ARC/Objects/Devices/pda.rsi
+    state: pda-merc
+  - type: Sprite
+    sprite: _ARC/Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-merc
 
 - type: entity
   parent: IDCardStandard

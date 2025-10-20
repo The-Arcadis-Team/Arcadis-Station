@@ -10,14 +10,16 @@
     sprite: _ARC/Structures/Closet.rsi
     noRot: true
     layers:
-    - state: generic
+    - state: NTPD
       map: ["enum.StorageVisualLayers.Base"]
-    - state: generic_door
+    - state: NTPD_door
       map: ["enum.StorageVisualLayers.Door"]
     - state: locked
+      sprite: Structures/Storage/closet.rsi
       map: ["enum.LockVisualLayers.Lock"]
       shader: unshaded
     - state: welded
+      sprite: Structures/Storage/closet.rsi
       visible: false
       map: ["enum.WeldableLayers.BaseWelded"]
     - state: paper

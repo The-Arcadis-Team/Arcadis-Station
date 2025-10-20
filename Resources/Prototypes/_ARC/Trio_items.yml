@@ -5,15 +5,13 @@
   parent: BasePDA
   id: gamerPDA
   name: game enjoyer PDA
-  description: Its a cool PDA used by me, The one whom enjoys games :)
+  description: When you look into the screen, another you looks back.
   components:
   - type: Pda
     id: IDCardtoweg
     state: pda-game
   - type: PdaBorderColor
     borderColor: "#800813"
-  - type: Icon
-    state: pda-game
   - type: UnpoweredFlashlight
   - type: PointLight
     enabled: false
@@ -23,6 +21,27 @@
     mask: /Textures/Effects/LightMasks/cone.png
     autoRot: true
     netsync: false
+  - type: Icon
+    sprite: _ARC/Objects/Devices/pda.rsi
+    state: pda-game
+  - type: Sprite
+    sprite: _ARC/Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-game
 
 #ID card
 
@@ -104,6 +123,12 @@
     borderColor: "#774705"
   - type: Icon
     state: pda-detective
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-detective
+
 
 #ID card
 
