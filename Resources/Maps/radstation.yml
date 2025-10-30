@@ -59829,17 +59829,6 @@ entities:
       linearDamping: 0
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingUniformJumpsuitJanitorIdris
-  entities:
-  - uid: 1291
-    components:
-    - type: Transform
-      parent: 1280
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
   - uid: 1292
     components:
     - type: Transform
@@ -59864,17 +59853,6 @@ entities:
     components:
     - type: Transform
       parent: 1280
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-- proto: ClothingUniformJumpsuitJanitorOrion
-  entities:
-  - uid: 1275
-    components:
-    - type: Transform
-      parent: 1263
     - type: Physics
       angularDamping: 0
       linearDamping: 0

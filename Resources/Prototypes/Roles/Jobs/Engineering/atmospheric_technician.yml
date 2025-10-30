@@ -9,7 +9,6 @@
     min: 36000
   - !type:CharacterEmployerRequirement
     employers:
-    - HephaestusIndustries
     - EinsteinEngines
     - NanoTrasen
   startingGear: AtmosphericTechnicianGear

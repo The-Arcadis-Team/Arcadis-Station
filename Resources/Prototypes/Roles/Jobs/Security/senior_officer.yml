@@ -28,7 +28,6 @@
         - BrittleBoneDisease
     - !type:CharacterEmployerRequirement
       employers:
-      - ZavodskoiInterstellar
       - PMCG
       - NanoTrasen
       - EastOrionCompany

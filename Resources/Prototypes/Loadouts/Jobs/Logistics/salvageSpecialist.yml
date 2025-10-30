@@ -332,24 +332,6 @@
     - ClothingUniformJumpsuitSalvageSpecialist
 
 - type: loadout
-  id: LoadoutSalvageSpecialistUniformHeph
-  category: JobsLogisticsSalvageSpecialist
-  cost: 0
-  exclusive: true
-  guideEntry: HephaestusIndustries
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutSalvageSpecialistUniforms
-    - !type:CharacterJobRequirement
-      jobs:
-        - SalvageSpecialist
-    - !type:CharacterEmployerRequirement
-      employers:
-        - HephaestusIndustries
-  items:
-    - ClothingUniformJumpsuitHephMiner
-
-- type: loadout
   id: LoadoutSalvageSpecialistUniformNT
   category: JobsLogisticsSalvageSpecialist
   cost: 0

@@ -12,7 +12,6 @@
   requirements:
     - !type:CharacterEmployerRequirement
       employers:
-      - IdrisIncorporated
       - NanoTrasen
   access:
   - Command

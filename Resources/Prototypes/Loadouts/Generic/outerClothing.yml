@@ -183,20 +183,6 @@
         - EinsteinEngines
 
 - type: loadout
-  id: LoadoutOuterHiCorporateJacket
-  category: Outer
-  cost: 0
-  guideEntry: HephaestusIndustries
-  items:
-    - ClothingOuterHiCorporateJacket
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutOuter
-    - !type:CharacterEmployerRequirement
-        employers:
-        - HephaestusIndustries
-
-- type: loadout
   id: LoadoutOuterHmCorporateJacket
   category: Outer
   cost: 0
@@ -258,62 +244,6 @@
   requirements:
     - !type:CharacterItemGroupRequirement
       group: LoadoutOuter
-
-- type: loadout
-  id: LoadoutOuterZhCorporateJacket
-  category: Outer
-  cost: 0
-  guideEntry: ZengHuPharmaceuticals
-  items:
-    - ClothingOuterZhCorporateJacket
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutOuter
-    - !type:CharacterEmployerRequirement
-        employers:
-        - ZengHuPharmaceuticals
-
-- type: loadout
-  id: LoadoutOuterIiCorporateJacket
-  category: Outer
-  cost: 0
-  guideEntry: IdrisIncorporated
-  items:
-    - ClothingOuterIiCorporateJacket
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutOuter
-    - !type:CharacterEmployerRequirement
-        employers:
-        - IdrisIncorporated
-
-- type: loadout
-  id: LoadoutOuterOeCorporateJacket
-  category: Outer
-  cost: 0
-  guideEntry: OrionExpress
-  items:
-    - ClothingOuterOeCorporateJacket
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutOuter
-    - !type:CharacterEmployerRequirement
-        employers:
-        - OrionExpress
-
-- type: loadout
-  id: LoadoutOuterIdrisIncorporatedWindbreaker
-  category: Outer
-  cost: 0
-  guideEntry: IdrisIncorporated
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutOuter
-    - !type:CharacterEmployerRequirement
-        employers:
-        - IdrisIncorporated
-  items:
-    - ClothingOuterCoatIdrisIncorporatedWindbreaker
 
 - type: loadout
   id: LoadoutOuterDenimJacket

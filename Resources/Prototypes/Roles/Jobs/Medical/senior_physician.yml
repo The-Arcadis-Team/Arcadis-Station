@@ -15,7 +15,6 @@
       min: 216000 # 60 hrs
     - !type:CharacterEmployerRequirement
       employers:
-      - ZengHuPharmaceuticals
       - Interdyne
       - NanoTrasen
   startingGear: SeniorPhysicianGear

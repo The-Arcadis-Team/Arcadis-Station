@@ -53319,42 +53319,9 @@ entities:
       linearDamping: 0
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingUniformJumpsuitJanitorIdris
-  entities:
-  - uid: 7902
-    components:
-    - type: Transform
-      parent: 7892
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-- proto: ClothingUniformJumpsuitJanitorIdrisFlipped
-  entities:
-  - uid: 7903
-    components:
-    - type: Transform
-      parent: 7892
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: ClothingUniformJumpsuitJanitorNt
   entities:
   - uid: 7904
-    components:
-    - type: Transform
-      parent: 7892
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-- proto: ClothingUniformJumpsuitJanitorOrion
-  entities:
-  - uid: 7905
     components:
     - type: Transform
       parent: 7892

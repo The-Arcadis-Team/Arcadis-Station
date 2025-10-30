@@ -4,12 +4,12 @@
   text: "/ServerInfo/Guidebook/SpaceStation14.xml"
   children:
   - Controls
+  - SettingLore
   - Jobs
   - Survival
   - Antagonists
   - Glossary
   - LoadoutInfo
-  - SettingLore
   - Psionics
 
 - type: guideEntry

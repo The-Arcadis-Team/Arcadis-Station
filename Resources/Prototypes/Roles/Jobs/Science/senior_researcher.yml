@@ -10,7 +10,6 @@
     - !type:CharacterEmployerRequirement
       employers:
       - NanoTrasen
-      - ZengHuPharmaceuticals
   startingGear: SeniorResearcherGear
   icon: "JobIconSeniorResearcher"
   supervisors: job-supervisors-rd

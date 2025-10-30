@@ -46,38 +46,6 @@
   name: bartender's nanotrasen uniform
 
 - type: entity
-  parent: ClothingUniformBaseFlippable
-  id: ClothingUniformJumpsuitBartenderIdris
-  name: bartender's idris incorporated uniform
-  description: A nice and tidy uniform. Shame about the bar though.
-  components:
-  - type: Sprite
-    sprite: Clothing/Uniforms/Jumpsuit/bartender_idris.rsi
-  - type: Clothing
-    sprite: Clothing/Uniforms/Jumpsuit/bartender_idris.rsi
-
-- type: entity
-  parent: [ ClothingUniformBaseFlipped, ClothingUniformJumpsuitBartenderIdris ]
-  id: ClothingUniformJumpsuitBartenderIdrisFlipped
-  name: bartender's idris incorporated uniform
-
-- type: entity
-  parent: ClothingUniformBaseFlippable
-  id: ClothingUniformJumpsuitBartenderOrion
-  name: bartender's orion express uniform
-  description: A nice and tidy uniform. Shame about the bar though.
-  components:
-  - type: Sprite
-    sprite: Clothing/Uniforms/Jumpsuit/bartender_orion.rsi
-  - type: Clothing
-    sprite: Clothing/Uniforms/Jumpsuit/bartender_orion.rsi
-
-- type: entity
-  parent: [ ClothingUniformBaseFlipped, ClothingUniformJumpsuitBartenderOrion ]
-  id: ClothingUniformJumpsuitBartenderOrionFlipped
-  name: bartender's orion express uniform
-
-- type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitJacketMonkey
   name: bartender's jacket monkey
@@ -211,39 +179,6 @@
   parent: [ ClothingUniformBaseFlipped, ClothingUniformJumpsuitChefNt ]
   id: ClothingUniformChefNtFlipped
   name: nanotrasen chef uniform
-
-- type: entity
-  parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitChefIdris
-  name: idris incorporated chef uniform
-  description: Can't cook without this.
-  components:
-  - type: Sprite
-    sprite: Clothing/Uniforms/Jumpsuit/chef_idris.rsi
-  - type: Clothing
-    sprite: Clothing/Uniforms/Jumpsuit/chef_idris.rsi
-
-- type: entity
-  parent: [ ClothingUniformBaseFlipped, ClothingUniformJumpsuitChefIdris ]
-  id: ClothingUniformChefIdrisFlipped
-  name: nidris incorporated notrasen chef uniform
-
-- type: entity
-  parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitChefOrion
-  name: orion express chef uniform
-  description: Can't cook without this.
-  components:
-  - type: Sprite
-    sprite: Clothing/Uniforms/Jumpsuit/chef_orion.rsi
-  - type: Clothing
-    sprite: Clothing/Uniforms/Jumpsuit/chef_orion.rsi
-
-- type: entity
-  parent: [ ClothingUniformBaseFlipped, ClothingUniformJumpsuitChefOrion ]
-  id: ClothingUniformChefOrionFlipped
-  name: orion express chef uniform
-
 
 - type: entity
   parent: [ClothingUniformBase, ClothingUniformFoldableBase]
@@ -478,38 +413,6 @@
   name: nanotrasen hydroponics jumpsuit
 
 - type: entity
-  parent: ClothingUniformBaseFlippable
-  id: ClothingUniformJumpsuitHydroponicsIdris
-  name: idris incorporated hydroponics jumpsuit
-  description: Has a strong earthy smell to it. Hopefully it's merely dirty as opposed to soiled.
-  components:
-  - type: Sprite
-    sprite: Clothing/Uniforms/Jumpsuit/hydro_idris.rsi
-  - type: Clothing
-    sprite: Clothing/Uniforms/Jumpsuit/hydro_idris.rsi
-
-- type: entity
-  parent: [ ClothingUniformBaseFlipped, ClothingUniformJumpsuitHydroponicsIdris ]
-  id: ClothingUniformJumpsuitHydroponicsIdrisFlipped
-  name: idris incorporated hydroponics jumpsuit
-
-- type: entity
-  parent: ClothingUniformBaseFlippable
-  id: ClothingUniformJumpsuitHydroponicsOrion
-  name: orion express hydroponics jumpsuit
-  description: Has a strong earthy smell to it. Hopefully it's merely dirty as opposed to soiled.
-  components:
-  - type: Sprite
-    sprite: Clothing/Uniforms/Jumpsuit/hydro_orion.rsi
-  - type: Clothing
-    sprite: Clothing/Uniforms/Jumpsuit/hydro_orion.rsi
-
-- type: entity
-  parent: [ ClothingUniformBaseFlipped, ClothingUniformJumpsuitHydroponicsOrion ]
-  id: ClothingUniformJumpsuitHydroponicsOrionFlipped
-  name: orion express hydroponics jumpsuit
-
-- type: entity
   parent: [ClothingUniformBase, ClothingUniformFoldableBase]
   id: ClothingUniformJumpsuitJanitor
   name: janitor jumpsuit
@@ -533,38 +436,6 @@
   parent: [ ClothingUniformBaseFlipped, ClothingUniformJumpsuitJanitorNt ]
   id: ClothingUniformJumpsuitJanitorNtFlipped
   name: nanotrasen janitor jumpsuit
-
-- type: entity
-  parent: ClothingUniformBaseFlippable
-  id: ClothingUniformJumpsuitJanitorIdris
-  name: idris incorporated janitor jumpsuit
-  description: The jumpsuit for the poor sop with a mop.
-  components:
-  - type: Sprite
-    sprite: Clothing/Uniforms/Jumpsuit/janitor_idris.rsi
-  - type: Clothing
-    sprite: Clothing/Uniforms/Jumpsuit/janitor_idris.rsi
-
-- type: entity
-  parent: [ ClothingUniformBaseFlipped, ClothingUniformJumpsuitJanitorIdris ]
-  id: ClothingUniformJumpsuitJanitorIdrisFlipped
-  name: idris incorporated janitor jumpsuit
-
-- type: entity
-  parent: ClothingUniformBaseFlippable
-  id: ClothingUniformJumpsuitJanitorOrion
-  name: orion express janitor jumpsuit
-  description: The jumpsuit for the poor sop with a mop.
-  components:
-  - type: Sprite
-    sprite: Clothing/Uniforms/Jumpsuit/janitor_orion.rsi
-  - type: Clothing
-    sprite: Clothing/Uniforms/Jumpsuit/janitor_orion.rsi
-
-- type: entity
-  parent: [ ClothingUniformBaseFlipped, ClothingUniformJumpsuitJanitorOrion ]
-  id: ClothingUniformJumpsuitJanitorOrionFlipped
-  name: orion express janitor jumpsuit
 
 - type: entity
   parent: [ClothingUniformBase, ClothingUniformFoldableBase]
@@ -829,54 +700,6 @@
 
 - type: entity
   parent: ClothingUniformBaseFlippable
-  id: ClothingUniformJumpsuitLibrarianIdris
-  name: idris incroporated librarian jumpsuit
-  description: A cosy teal jumper fit for a curator of books.
-  components:
-  - type: Sprite
-    sprite: Clothing/Uniforms/Jumpsuit/librarian_idris.rsi
-  - type: Clothing
-    sprite: Clothing/Uniforms/Jumpsuit/librarian_idris.rsi
-
-- type: entity
-  parent: [ ClothingUniformBaseFlipped, ClothingUniformJumpsuitLibrarianIdris ]
-  id: ClothingUniformJumpsuitLibrarianIdrisFlipped
-  name: idris incroporated librarian jumpsuit
-
-- type: entity
-  parent: ClothingUniformBaseFlippable
-  id: ClothingUniformJumpsuitLibrarianOrion
-  name: orion express librarian jumpsuit
-  description: A cosy brown jumper fit for a curator of books.
-  components:
-  - type: Sprite
-    sprite: Clothing/Uniforms/Jumpsuit/librarian_orion.rsi
-  - type: Clothing
-    sprite: Clothing/Uniforms/Jumpsuit/librarian_orion.rsi
-
-- type: entity
-  parent: [ ClothingUniformBaseFlipped, ClothingUniformJumpsuitLibrarianOrion ]
-  id: ClothingUniformJumpsuitLibrarianOrionFlipped
-  name: orion express librarian jumpsuit
-
-- type: entity
-  parent: ClothingUniformBaseFlippable
-  id: ClothingUniformJumpsuitLibrarianHeph
-  name: hephaestus industries librarian jumpsuit
-  description: A cosy green jumper fit for a curator of books.
-  components:
-  - type: Sprite
-    sprite: Clothing/Uniforms/Jumpsuit/librarian_heph.rsi
-  - type: Clothing
-    sprite: Clothing/Uniforms/Jumpsuit/librarian_heph.rsi
-
-- type: entity
-  parent: [ ClothingUniformBaseFlipped, ClothingUniformJumpsuitLibrarianHeph ]
-  id: ClothingUniformJumpsuitLibrarianHephFlipped
-  name: hephaestus industries librarian jumpsuit
-
-- type: entity
-  parent: ClothingUniformBaseFlippable
   id: ClothingUniformJumpsuitLibrarianPMCG
   name: private military contracting group librarian jumpsuit
   description: A cosy white jumper fit for a curator of books.
@@ -890,22 +713,6 @@
   parent: [ ClothingUniformBaseFlipped, ClothingUniformJumpsuitLibrarianPMCG ]
   id: ClothingUniformJumpsuitLibrarianPMCGFlipped
   name: private military contracting group librarian jumpsuit
-
-- type: entity
-  parent: ClothingUniformBaseFlippable
-  id: ClothingUniformJumpsuitLibrarianZav
-  name: zavodskoi interstellar librarian jumpsuit
-  description: A blood brown jumper fit for a curator of books.
-  components:
-  - type: Sprite
-    sprite: Clothing/Uniforms/Jumpsuit/librarian_zav.rsi
-  - type: Clothing
-    sprite: Clothing/Uniforms/Jumpsuit/librarian_zav.rsi
-
-- type: entity
-  parent: [ ClothingUniformBaseFlipped, ClothingUniformJumpsuitLibrarianZav ]
-  id: ClothingUniformJumpsuitLibrarianZavFlipped
-  name: zavodskoi interstellar librarian jumpsuit
 
 - type: entity
   parent: ClothingUniformBaseFlippable

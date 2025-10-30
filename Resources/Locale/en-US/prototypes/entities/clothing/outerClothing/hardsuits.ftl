@@ -1,18 +1,18 @@
 ent-ClothingOuterHardsuitBasic = basic vacsuit
     .desc = A common, colonial-era vacsuit of indeterminate make and model. It's strictly better than nothing, but not by much.
 ent-ClothingOuterHardsuitAtmos = HpI-19t "Fotia" hardsuit
-    .desc = A standard-issue hardsuit produced by Hephaestus Industries, used by atmospheric technicians in low & high pressure environments.
+    .desc = A standard-issue hardsuit produced by Light Work Conglomerate, used by atmospheric technicians in low & high pressure environments.
     The label indicates that its rated for high amounts of thermal exposure. It feels a bit heavy.
 ent-ClothingOuterHardsuitEngineering = HpI-19r "Lampsi" hardsuit
-    .desc = A standard-issue hardsuit produced by Hephaestus Industries, used by engineers in low & high pressure environments.
+    .desc = A standard-issue hardsuit produced by Light Work Conglomerate, used by engineers in low & high pressure environments.
     The label indicates that its rated for moderate amounts of radiation exposure. It feels a bit heavy.
 ent-ClothingOuterHardsuitEngineeringUnpainted = HpI-19r "Lampsi" hardsuit
     .desc = { ent-ClothingOuterHardsuitEngineering.desc }
 ent-ClothingOuterHardsuitSpatio = HpI-20s "Kriti" hardsuit
-    .desc = A standard-issue hardsuit produced by Hephaestus Industries, designed for industrial work in low pressure environments.
+    .desc = A standard-issue hardsuit produced by Light Work Conglomerate, designed for industrial work in low pressure environments.
     The label indicates that its rated for moderate amounts of radiation exposure, and it feels somewhat light.
 ent-ClothingOuterHardsuitSalvage = HpI-20a "Lavrion" hardsuit
-    .desc = A sturdy hardsuit produced by Hephaestus Industries, designed for industrial work in low pressure environments.
+    .desc = A sturdy hardsuit produced by Light Work Conglomerate, designed for industrial work in low pressure environments.
     The labels indicate that it provides protection against most forms of damage. It feels heavy.
 ent-ClothingOuterHardsuitVoidParamed = ZhP-24m "Sukunabikona"
     .desc = A standard-issue hardsuit manufactured by Zeng-Hu Pharmaceuticals, used by paramedics due to its lightweight frame.
@@ -51,7 +51,7 @@ ent-ClothingOuterHardsuitCap = NT-42c - "Tengri" tacsuit
     .desc = A formal, tactical combat hardsuit, made in collaboration by Nanotrasen's R&D department with Five-Points-Armory for station captains.
     The labels indicate that it provides protection against most forms of damage. It feels somewhat light.
 ent-ClothingOuterHardsuitEngineeringWhite = HpI-24c "Daedalus" hardsuit
-    .desc = A specialized hardsuit produced by Hephaestus Industries, often purchased for use by Nanotrasen senior engineers.
+    .desc = A specialized hardsuit produced by Light Work Conglomerate, often purchased for use by Nanotrasen senior engineers.
     The labels indicate that its rated for high amounts of radiation and pressure. It feels somewhat light.
 ent-ClothingOuterHardsuitMedical = ZhP-25m - "Okuninushi" hardsuit
     .desc = A hardsuit produced by Zeng-hu Pharmaceuticals, often purchased for use by Nanotrasen senior medical doctors.
@@ -71,7 +71,7 @@ ent-ClothingOuterHardsuitCombatHoS = FPA-99s - "Dayicin Mk.II" tacsuit
     .desc = A top-of-the-line tactical combat hardsuit produced by Five-Points-Armory, painted with the colors of station security.
     The tags on the suit indicate that its rated for moderate amounts of physical and explosion damage. It feels somewhat light.
 ent-ClothingOuterHardsuitLuxury = HpI-20c - "Minos" hardsuit
-    .desc = A modified mining hardsuit from Hephaestus Industries, fashioned after the Logistics Officer's colors.
+    .desc = A modified mining hardsuit from Light Work Conglomerate, fashioned after the Logistics Officer's colors.
     The labels indicate that it provides slight protection against most forms of damage. It feels incredibly light.
 ent-ClothingOuterHardsuitSyndie = CSA-51a - "Shanlin" tacsuit
     .desc = A tactical combat hardsuit produced by the Cybersun-Armaments Corporation, the suit's tags indicate it provides moderate protection against most forms of damage.

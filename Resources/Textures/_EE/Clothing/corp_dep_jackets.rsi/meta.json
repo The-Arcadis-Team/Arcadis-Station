@@ -92,34 +92,6 @@
             "directions": 4
         },
         {
-            "name": "idris_corp_jacket"
-        },
-        {
-            "name": "idris_corp_jacket_open"
-        },
-        {
-            "name": "idris_corp_jacket_su",
-            "directions": 4
-        },
-        {
-            "name": "idris_corp_jacket_open_su",
-            "directions": 4
-        },
-        {
-            "name": "idris_corp_jacket_alt"
-        },
-        {
-            "name": "idris_corp_jacket_alt_open"
-        },
-        {
-            "name": "idris_corp_jacket_alt_su",
-            "directions": 4
-        },
-        {
-            "name": "idris_corp_jacket_alt_open_su",
-            "directions": 4
-        },
-        {
             "name": "zavod_corp_jacket"
         },
         {
@@ -176,20 +148,6 @@
             "directions": 4
         },
         {
-            "name": "heph_corp_jacket"
-        },
-        {
-            "name": "heph_corp_jacket_open"
-        },
-        {
-            "name": "heph_corp_jacket_su",
-            "directions": 4
-        },
-        {
-            "name": "heph_corp_jacket_open_su",
-            "directions": 4
-        },
-        {
             "name": "nt_corp_jacket"
         },
         {
@@ -229,34 +187,6 @@
         },
         {
             "name": "zeng_corp_jacket_alt_open_su",
-            "directions": 4
-        },
-        {
-            "name": "orion_corp_jacket"
-        },
-        {
-            "name": "orion_corp_jacket_open"
-        },
-        {
-            "name": "orion_corp_jacket_su",
-            "directions": 4
-        },
-        {
-            "name": "orion_corp_jacket_open_su",
-            "directions": 4
-        },
-        {
-            "name": "orion_corp_jacket_alt"
-        },
-        {
-            "name": "orion_corp_jacket_alt_open"
-        },
-        {
-            "name": "orion_corp_jacket_alt_su",
-            "directions": 4
-        },
-        {
-            "name": "orion_corp_jacket_alt_open_su",
             "directions": 4
         },
         {

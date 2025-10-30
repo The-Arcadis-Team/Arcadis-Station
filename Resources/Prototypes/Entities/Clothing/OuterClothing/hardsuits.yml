@@ -68,8 +68,6 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitAtmos
-  - type: GuideHelp
-    guides: [ HephaestusIndustries ]
 
 #Engineering Hardsuit
 - type: entity
@@ -127,8 +125,6 @@
     clothingPrototype: ClothingHeadHelmetHardsuitEngineering
   - type: StaminaDamageResistance
     coefficient: 0.75 # 25%
-  - type: GuideHelp
-    guides: [ HephaestusIndustries ]
   - type: TemperatureProtection
     heatingCoefficient: 0.001
     coolingCoefficient: 0.001
@@ -168,8 +164,6 @@
     - Hardsuit
     - WhitelistChameleon
     - HardsuitSpatio
-  - type: GuideHelp
-    guides: [ HephaestusIndustries ]
 
 #Salvage Hardsuit
 - type: entity
@@ -201,8 +195,6 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSalvage
-  - type: GuideHelp
-    guides: [ HephaestusIndustries ]
 
 #Goliath Hardsuit
 - type: entity
@@ -273,8 +265,6 @@
     reduction: 1
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitMaxim
-  - type: GuideHelp
-    guides: [ HephaestusIndustries ]
 
 #Paramedic Voidsuit
 - type: entity
@@ -335,8 +325,6 @@
     mask: /Textures/Effects/LightMasks/double_cone.png
   - type: RotatingLight
     speed: 360
-  - type: GuideHelp
-    guides: [ ZengHuPharmaceuticals ]
 
 #Security Hardsuit
 - type: entity
@@ -516,8 +504,6 @@
     - type: SupermatterImmune
   - type: StaminaDamageResistance
     coefficient: 0.65 # 35%
-  - type: GuideHelp
-    guides: [ HephaestusIndustries ]
   - type: TemperatureProtection
     heatingCoefficient: 0.001
     coolingCoefficient: 0.001
@@ -548,8 +534,6 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitMedical
-  - type: GuideHelp
-    guides: [ ZengHuPharmaceuticals ]
 
 #Research Director's Hardsuit
 - type: entity
@@ -663,8 +647,6 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitLuxury
-  - type: GuideHelp
-    guides: [ HephaestusIndustries ]
 
 #ANTAG HARDSUITS
 #Blood-red Hardsuit

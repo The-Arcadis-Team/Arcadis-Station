@@ -34,10 +34,6 @@
   items:
     - type: loadout
       id: LoadoutServiceHeadChefNt
-    - type: loadout
-      id: LoadoutServiceHeadChefIdris
-    - type: loadout
-      id: LoadoutServiceHeadChefOrion
 
 #- type: characterItemGroup
 #  id: LoadoutChefId
@@ -59,10 +55,6 @@
   items:
     - type: loadout
       id: LoadoutServiceOuterChefNt
-    - type: loadout
-      id: LoadoutServiceOuterChefIdris
-    - type: loadout
-      id: LoadoutServiceOuterChefOrion
 
 #- type: characterItemGroup
 #  id: LoadoutChefShoes
@@ -74,7 +66,3 @@
   items:
     - type: loadout
       id: LoadoutServiceJumpsuitChefNt
-    - type: loadout
-      id: LoadoutServiceJumpsuitChefIdris
-    - type: loadout
-      id: LoadoutServiceJumpsuitChefOrion

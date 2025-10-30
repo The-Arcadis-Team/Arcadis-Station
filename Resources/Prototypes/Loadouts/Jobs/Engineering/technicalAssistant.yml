@@ -131,23 +131,6 @@
     - ClothingUniformJumpskirtColorYellow
 
 - type: loadout
-  id: LoadoutTechnicalAssistantUniformsSuitZav
-  category: JobsEngineeringTechnicalAssistant
-  cost: 0
-  exclusive: true
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutTechnicalAssistantUniforms
-    - !type:CharacterJobRequirement
-      jobs:
-        - TechnicalAssistant
-    - !type:CharacterEmployerRequirement
-      employers:
-        - ZavodskoiInterstellar
-  items:
-    - ClothingUniformJumpsuitZavodEngineerApprentice
-
-- type: loadout
   id: LoadoutTechnicalAssistantUniformsSuitNT
   category: JobsEngineeringTechnicalAssistant
   cost: 0
@@ -163,20 +146,3 @@
         - NanoTrasen
   items:
     - ClothingUniformJumpsuitNTEngineeringApprentice
-
-- type: loadout
-  id: LoadoutTechnicalAssistantUniformsSuitHeph
-  category: JobsEngineeringTechnicalAssistant
-  cost: 0
-  exclusive: true
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutTechnicalAssistantUniforms
-    - !type:CharacterJobRequirement
-      jobs:
-        - TechnicalAssistant
-    - !type:CharacterEmployerRequirement
-      employers:
-        - HephaestusIndustries
-  items:
-    - ClothingUniformJumpsuitHephEngineerApprentice

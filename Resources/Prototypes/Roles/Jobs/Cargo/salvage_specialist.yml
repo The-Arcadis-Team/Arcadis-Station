@@ -9,7 +9,6 @@
     min: 21600
   - !type:CharacterEmployerRequirement
     employers:
-    - OrionExpress
     - PMCG
     - NanoTrasen
   icon: "JobIconShaftMiner"

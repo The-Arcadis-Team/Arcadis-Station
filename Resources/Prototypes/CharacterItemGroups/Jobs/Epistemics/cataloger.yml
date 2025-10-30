@@ -75,12 +75,6 @@
     - type: loadout
       id: LoadoutScienceJumpsuitLibrarianNt
     - type: loadout
-      id: LoadoutScienceJumpsuitLibrarianIdris
-    - type: loadout
-      id: LoadoutScienceJumpsuitLibrarianOrion
-    - type: loadout
-      id: LoadoutScienceJumpsuitLibrarianHeph
-    - type: loadout
       id: LoadoutScienceJumpsuitLibrarianPMCG
     - type: loadout
       id: LoadoutScienceJumpsuitLibrarianZav

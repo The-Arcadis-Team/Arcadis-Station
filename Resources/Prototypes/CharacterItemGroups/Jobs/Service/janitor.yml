@@ -67,7 +67,3 @@
   items:
     - type: loadout
       id: LoadoutServiceJumpsuitJanitorNt
-    - type: loadout
-      id: LoadoutServiceJumpsuitJanitorIdris
-    - type: loadout
-      id: LoadoutServiceJumpsuitJanitorOrion
