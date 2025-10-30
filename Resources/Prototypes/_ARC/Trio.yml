@@ -127,8 +127,8 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      2000: Critical
-      2200: Dead
+      500: Critical
+      600: Dead
   - type: MobStateActions
     actions:
       Critical:
@@ -383,7 +383,7 @@
   name: The one whom enjoys games
   parent: BaseTriomob
   id: Mobtoweg
-  description: A miserable pile of emptiness.
+  description: The miserable pile of emptiness.
   components:
   - type: InputMover
   - type: MobMover

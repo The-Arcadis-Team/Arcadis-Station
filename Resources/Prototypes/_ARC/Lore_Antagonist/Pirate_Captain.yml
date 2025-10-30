@@ -1,0 +1,20 @@
+- type: entity
+  parent: MobHuman
+  id: PirateCaptain
+  name: The Pirate Captain
+  description: The pirate Captain
+  components:
+   - type: Loadout
+     prototypes: [PCGear]
+
+- type: startingGear
+  id: PCGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPirate
+    shoes: ClothingShoesBootsMagAdv
+    id: PiratePDA
+    ears: ClothingHeadsetAltFreelancer
+    outerClothing: ClothingOuterHardsuitPirateCap
+    pocket1: WeaponEnergyRevolver
+    pocket2: EnergyCutlass
+    neck: ClothingNeckCloakPirateCap
