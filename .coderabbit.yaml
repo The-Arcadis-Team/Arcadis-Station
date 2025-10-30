@@ -2,7 +2,7 @@
 language: "en" # English
 early_access: false
 reviews:
-  profile: assertive
+  profile: chill
   high_level_summary: false
   poem: false
   review_status: false
@@ -16,5 +16,10 @@ reviews:
       - "DO NOT MERGE"
     drafts: false
     base_branches: []
+tools:
+    github-checks:
+      enabled: true
+      timeout_ms: 900000
+
 chat:
   auto_reply: false
