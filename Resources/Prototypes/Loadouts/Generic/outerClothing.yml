@@ -193,19 +193,6 @@
       group: LoadoutOuter
 
 - type: loadout
-  id: LoadoutOuterIdCorporateJacket
-  category: Outer
-  cost: 0
-  items:
-    - ClothingOuterIdCorporateJacket
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutOuter
-    - !type:CharacterEmployerRequirement
-        employers:
-        - Interdyne
-
-- type: loadout
   id: LoadoutOuterBcCorporateJacket
   category: Outer
   cost: 0

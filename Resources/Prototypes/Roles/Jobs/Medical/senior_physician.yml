@@ -15,7 +15,6 @@
       min: 216000 # 60 hrs
     - !type:CharacterEmployerRequirement
       employers:
-      - Interdyne
       - NanoTrasen
   startingGear: SeniorPhysicianGear
   icon: "JobIconSeniorPhysician"

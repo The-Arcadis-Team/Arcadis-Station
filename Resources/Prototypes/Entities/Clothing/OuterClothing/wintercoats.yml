@@ -1290,7 +1290,6 @@
     sprite: Clothing/OuterClothing/WinterCoats/corpo_jacket_bishop_cybernetics.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/WinterCoats/corpo_jacket_bishop_cybernetics.rsi
-  - type: GuideHelp
 
 - type: entity
   parent: ClothingOuterWinterCoat

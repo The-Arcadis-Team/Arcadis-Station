@@ -6,7 +6,6 @@
   requirements:
   - !type:CharacterEmployerRequirement
     employers:
-    - Interdyne
     - NanoTrasen
   startingGear: MedicalInternGear
   icon: "JobIconMedicalIntern"

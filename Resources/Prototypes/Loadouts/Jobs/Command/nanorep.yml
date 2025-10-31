@@ -104,23 +104,6 @@
   items:
     - ClothingOuterEeCorporateJacket
 
-- type: loadout
-  id: LoadoutClothingOuterCorporateJacketInterdyneCorporateLiaison
-  category: JobsCommandNanorep
-  cost: 0
-  exclusive: true
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutNanorepUniforms
-    - !type:CharacterJobRequirement
-      jobs:
-        - NanotrasenRepresentative
-    - !type:CharacterEmployerRequirement
-      employers:
-      - Interdyne
-  items:
-    - ClothingOuterIdCorporateJacket
-
 # Shoes
 
 # Uniforms
