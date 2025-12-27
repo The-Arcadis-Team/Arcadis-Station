@@ -13,7 +13,6 @@
   - !type:CharacterEmployerRequirement
     employers:
     - NanoTrasen
-    - IdrisIncorporated
   weight: 10
   startingGear: HoPGear
   icon: "JobIconHeadOfPersonnel"

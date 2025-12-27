@@ -9,8 +9,6 @@
     min: 28800
   - !type:CharacterEmployerRequirement
     employers:
-    - ZengHuPharmaceuticals
-    - Interdyne
     - NanoTrasen
   startingGear: ChemistGear
   icon: "JobIconChemist"

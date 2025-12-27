@@ -17,7 +17,6 @@
   - !type:CharacterEmployerRequirement
     employers:
     - NanoTrasen
-    - ZengHuPharmaceuticals
     - EastOrionCompany
 
 - type: startingGear

@@ -6,8 +6,6 @@
   requirements:
   - !type:CharacterEmployerRequirement
     employers:
-    - ZengHuPharmaceuticals
-    - Interdyne
     - NanoTrasen
   startingGear: MedicalInternGear
   icon: "JobIconMedicalIntern"

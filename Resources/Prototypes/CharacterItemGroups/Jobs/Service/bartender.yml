@@ -54,10 +54,6 @@
   items:
     - type: loadout
       id: LoadoutServiceHeadBartenderNt
-    - type: loadout
-      id: LoadoutServiceHeadBartenderIdris
-    - type: loadout
-      id: LoadoutServiceHeadBartenderOrion
 
 #- type: characterItemGroup
 #  id: LoadoutBartenderId
@@ -83,10 +79,6 @@
       id: LoadoutServiceBartenderArmorDuraVest
     - type: loadout
       id: LoadoutServiceOuterBartenderNt
-    - type: loadout
-      id: LoadoutServiceOuterBartenderIdris
-    - type: loadout
-      id: LoadoutServiceOuterBartenderOrion
 
 #- type: characterItemGroup
 #  id: LoadoutBartenderShoes
@@ -100,7 +92,3 @@
       id: LoadoutServiceBartenderUniformPurple
     - type: loadout
       id: LoadoutServiceJumpsuitBartenderNt
-    - type: loadout
-      id: LoadoutServiceJumpsuitBartenderIdris
-    - type: loadout
-      id: LoadoutServiceJumpsuitBartenderOrion

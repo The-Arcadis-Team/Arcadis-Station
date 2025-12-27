@@ -122,28 +122,6 @@
 
 - type: entity
   parent: ClothingOuterBase
-  id: ClothingOuterVestIdris
-  name: idris incorporated vest
-  description: A thick vest with a rubbery, water-resistant shell coloured in teal.
-  components:
-  - type: Sprite
-    sprite: Clothing/OuterClothing/Vests/vest_idris.rsi
-  - type: Clothing
-    sprite: Clothing/OuterClothing/Vests/vest_idris.rsi
-
-- type: entity
-  parent: ClothingOuterBase
-  id: ClothingOuterVestOrion
-  name: orion express vest
-  description: A thick vest with a rubbery, water-resistant shell coloured in brown.
-  components:
-  - type: Sprite
-    sprite: Clothing/OuterClothing/Vests/vest_orion.rsi
-  - type: Clothing
-    sprite: Clothing/OuterClothing/Vests/vest_orion.rsi
-
-- type: entity
-  parent: ClothingOuterBase
   id: ClothingOuterVestColorable
   name: vest
   description: You have a vested interest in looking good, and this vest is the vest choice to achieve that!

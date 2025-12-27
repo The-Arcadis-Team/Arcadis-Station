@@ -3,7 +3,7 @@
   parent: [ClothingHeadHelmetBasic, BaseClothingRadio]
   id: ClothingHeadHelmetHeavyAblative
   name: heavy laser-ablative helmet
-  description: A heavy laser-ablative helmet manufactured by Zavodskoi Interstellar and sold to NT Security. It trades mobility for unparalleled protection against laser weaponry.
+  description: A heavy laser-ablative helmet manufactured by LOREPLACEHOLDER and sold to NT Security. It trades mobility for unparalleled protection against laser weaponry.
   components:
     - type: Sprite
       sprite: _EE/Clothing/Generic/Helmet/heavy_helmet_ablative.rsi
@@ -32,7 +32,7 @@
   parent: [ClothingHeadHelmetBasic, BaseClothingRadio]
   id: ClothingHeadHelmetHeavyBallistic
   name: heavy ballistic helmet
-  description: A heavy ballistic helmet manufactured by Zavodskoi Interstellar and sold to NT Security. It trades mobility for unparalleled protection against ballistic weaponry.
+  description: A heavy ballistic helmet manufactured by LOREPLACEHOLDER and sold to NT Security. It trades mobility for unparalleled protection against ballistic weaponry.
   components:
     - type: Sprite
       sprite: _EE/Clothing/Generic/Helmet/heavy_helmet_ballistic.rsi
@@ -61,7 +61,7 @@
   parent: [ClothingHeadHelmetBasic, BaseClothingRadio]
   id: ClothingHeadHelmetHeavyRiot
   name: heavy riot helmet
-  description: A heavy riot helmet manufactured by Zavodskoi Interstellar and sold to NT Security. It trades mobility for unparalleled protection against blunt force.
+  description: A heavy riot helmet manufactured by LOREPLACEHOLDER and sold to NT Security. It trades mobility for unparalleled protection against blunt force.
   components:
     - type: Sprite
       sprite: _EE/Clothing/Generic/Helmet/heavy_helmet_riot.rsi
@@ -90,7 +90,7 @@
   parent: [ClothingHeadHelmetBasic, BaseClothingRadio]
   id: ClothingHeadHelmetHeavyStandard
   name: heavy security helmet
-  description: A heavy security helmet manufactured by Zavodskoi Interstellar and sold to NT Security. It trades mobility for unparalleled protection against general threats.
+  description: A heavy security helmet manufactured by LOREPLACEHOLDER and sold to NT Security. It trades mobility for unparalleled protection against general threats.
   components:
     - type: Sprite
       sprite: _EE/Clothing/Generic/Helmet/heavy_helmet_standard.rsi
@@ -119,7 +119,7 @@
   parent: [ClothingHeadHelmetHeavyStandard, BaseClothingRadio]
   id: ClothingHeadHelmetHeavyHoS
   name: advanced combat helmet
-  description: A heavy security helmet manufactured by Zavodskoi Interstellar and sold to NT Security. This helmet bears markings for NT Command Staff.
+  description: A heavy security helmet manufactured by LOREPLACEHOLDER and sold to NT Security. This helmet bears markings for NT Command Staff.
   components:
     - type: Sprite
       sprite: _EE/Clothing/Generic/Helmet/heavy_helmet_hos.rsi

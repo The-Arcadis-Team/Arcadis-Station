@@ -60,19 +60,6 @@
       group: LoadoutSmokes
 
 - type: loadout
-  id: LoadoutItemCigsSyndicate
-  category: Items
-  cost: 2
-  items:
-    - CigPackSyndicate
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: LoadoutSmokes
-    - !type:CharacterEmployerRequirement
-      employers:
-      - Interdyne
-
-- type: loadout
   id: LoadoutItemLighter
   category: Items
   cost: 1

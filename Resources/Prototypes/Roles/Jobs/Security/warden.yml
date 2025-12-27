@@ -22,7 +22,6 @@
     - BrittleBoneDisease
   - !type:CharacterEmployerRequirement
     employers:
-    - ZavodskoiInterstellar
     - PMCG
     - NanoTrasen
   startingGear: WardenGear

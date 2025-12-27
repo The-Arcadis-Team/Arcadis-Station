@@ -9,9 +9,7 @@
     min: 28800
   - !type:CharacterEmployerRequirement
     employers:
-    - Interdyne
     - NanoTrasen
-    - ZengHuPharmaceuticals
   startingGear: ParamedicGear
   icon: "JobIconParamedic"
   supervisors: job-supervisors-cmo

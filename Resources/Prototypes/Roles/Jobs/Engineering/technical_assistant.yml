@@ -13,8 +13,6 @@
   requirements:
   - !type:CharacterEmployerRequirement
     employers:
-    - HephaestusIndustries
-    - ZavodskoiInterstellar
     - EinsteinEngines
     - NanoTrasen
 

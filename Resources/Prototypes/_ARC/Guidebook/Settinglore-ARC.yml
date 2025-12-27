@@ -1,0 +1,6 @@
+# Arcadis Station Lore
+
+- type: guideEntry
+  id: NTPD
+  name: guide-entry-NTPD
+  text: "/ServerInfo/_ARC/NTPD.xml"

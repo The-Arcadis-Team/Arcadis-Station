@@ -1,0 +1,17 @@
+- type: lobbyBackground
+  id: HUNTED
+  background: /Textures/LobbyScreens/terminalstation.webp
+  name: HUNTED
+  artist: Guloveos
+
+- type: lobbyBackground
+  id: METH
+  background: /Textures/LobbyScreens/justaweekaway.webp
+  name: Meth
+  artist: p.r.ospector / kai
+
+- type: lobbyBackground
+  id: PIRATECAPTAIN
+  background: /Textures/LobbyScreens/nosfordgunther.webp
+  name: Goodbye, Pirate
+  artist: Gulovoes
